@@ -1,0 +1,39 @@
+:root{
+  --background: rgb(251, 239, 225);
+}
+
+
+body {
+  font-family: "Poppins";
+  background-color: var(--background);
+  
+}
+
+.paper {
+  background-color: antiquewhite;
+}
+
+.small {
+  background-color: var(--background) !important;
+}
+
+.basket{
+  background-color: blue !important;
+}
+
+.pets{
+  background-color: aqua;
+}
+
+.pet-card{
+  background-color: blueviolet;
+}
+
+.magnetic {
+  transition: transform 0.2s ease-in-out;
+}
+
+.magnetic:hover {
+  transform: scale(1.1); /* Optional: Add scaling effect on hover */
+}
+
