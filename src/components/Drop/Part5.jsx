@@ -1,3 +1,5 @@
+import React from 'react'
+
 import DropMenu from "./DropMenu";
 
 export default function Part5({ submitted}){

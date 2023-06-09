@@ -1,3 +1,5 @@
+import React from 'react'
+
 import Blank from "./Blank"
 import content from "../../../public/content.json"
 
