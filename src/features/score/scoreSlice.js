@@ -14,9 +14,12 @@ const initialState = {
       noPoint: (state, action) => {
         state.points +=0;
       },
+      addHalfPoint:(state, action) =>{
+        state.points += 0.5;
+      }
     },
   });
 
-  export const { addPoint, noPoint } = scoreSlice.actions;
+  export const { addPoint, noPoint, addHalfPoint } = scoreSlice.actions;
 
 export default scoreSlice.reducer;

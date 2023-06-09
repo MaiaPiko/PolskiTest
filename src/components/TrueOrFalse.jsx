@@ -6,15 +6,17 @@ import FormControlLabel from '@mui/material/FormControlLabel';
 import FormLabel from '@mui/material/FormLabel';
 import Radio from '@mui/material/Radio';
 import RadioGroup from '@mui/material/RadioGroup';
-import CheckIcon from '@mui/icons-material/Check';
-import ClearIcon from '@mui/icons-material/Clear';
 import { useDispatch, useSelector } from 'react-redux';
 import { addPoint, noPoint } from '../features/score/scoreSlice';
+import CheckMark from './CheckMark';
+import CrossMark from './CrossMark';
+
 
 export default function TrueOrFlase({
   question,
   answer,
   submitted,
+  id
 }) {
   const [selectedValue, setSelectedValue] = useState(null);
   const [isAnswered, setIsAnswered] = useState(false);
@@ -23,7 +25,7 @@ export default function TrueOrFlase({
   
 
   useEffect(() => {
-    if (submitted) {
+    if (submitted && !id=="0") {
       const isCorrect = selectedValue === answer;
       if (isCorrect) {
         dispatch(addPoint());
@@ -45,20 +47,26 @@ export default function TrueOrFlase({
         <RadioGroup
           aria-label="choices"
           name="choices"
-          value={selectedValue}
+          value={id==0? answer: selectedValue}
           onChange={handleChange}
           sx={{ ":disabled": { submitted: true } }}
           >
-          <FormControlLabel value="p" control={<Radio />} label="P"disabled={submitted}/>
-          <FormControlLabel value="f" control={<Radio />} label="F" disabled={submitted}/>
+          <FormControlLabel value="p" control={<Radio />} label="P"disabled={submitted || id=="0"}/>
+          <FormControlLabel value="f" control={<Radio />} label="F" disabled={submitted || id=="0"}/>
         </RadioGroup>
       </FormControl>
-      {submitted && isAnswered && (
+      {submitted && id!="0" && (
         <Box mt={2}>
           {selectedValue === answer ? (
-            <CheckIcon color="primary" />
+            <>
+            <CheckMark />
+
+            </>
           ) : (
-            <ClearIcon color="error" />
+            <>
+            <CrossMark />
+
+            </>
           )}
         </Box>
       )}

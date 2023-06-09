@@ -7,7 +7,7 @@ function Home() {
 
   return (
     <>
-        <h1>Home</h1>
+        <h1>A home page, in case I decide to add to the project in the future.</h1>
 
     </>
   )

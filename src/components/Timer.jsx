@@ -41,7 +41,7 @@ const Timer = ({ minutes }) => {
         {formatTime(seconds)}      
       </Button>
       
-      <p style={{fontSize:"0.75em"}}>Start the timer when ready!</p>
+      <p style={{fontSize:"0.75em"}}>Uruchom stoper, gdy będziesz gotowy!</p>
     </div>
   );
 };

@@ -1,7 +1,13 @@
-{
+{"scoreValue":{
+  "1":"Uwaga: jeden punkt dla każdego innego niż przykład.",
+  "0.5":"Uwaga: Pół punktu dla każdego innego niż przykład."
+},
     "test1": {
       "reading": {
+        "title": "Rozumienie tekstów pisanych",
+        "description":"Poniżej cała sekcja Rozumienie tekstów pisanych z <a href='https://certyfikatpolski.pl/wp-content/uploads/2017/05/5_B1_test.pdf'>przykładowego testu</a> <a href='https://certyfikatpolski.pl/'>certyfikatpolski.pl<a> z 2017 roku. Wszystkie pytania i ćwiczenia zostały przekształcone w ćwiczenia interaktywne. Możesz się sprawdzić, uruchamiając poniższy stoper i przechodząc przez pytania. Po zakończeniu możesz zobaczyć swój wynik.<br>",
         "part1": {
+          
           "instructions":"I. Proszę przeczytać akapity i zaznaczyć właściwe odpowiedzi zgodnie z podanym przykładem.",
           "0": {
             "text": "0. Letni hotel dla zwierząt to już nic nowego. Jeśli wyjeżdżamy na urlop, a nie mamy kogoś, kto mógłby się zająć naszymi kwiatkami, możemy zostawić je w hotelu dla roślin. Gdy nasze kwiaty nie lubią zmian, możemy wynająć firmę, która będzie dbać o nie na miejscu.",
@@ -68,6 +74,10 @@
               "instructions":"II. Proszę przeczytać tekst, a następnie zaznaczyć: P – gdy zdanie jest prawdziwe, F – gdy jest fałszywe.",
               "title":"Mentor dla cudzoziemca",
               "text": "<p>Ola Różycka, studentka psychologii, przez cały ubiegły rok opiekowała się Martiną, Włoszką z Bolonii, która przyjechała na Uniwersytet Warszawski studiować ekonomię. </p> <p>– Pomagałam jej załatwiać sprawy w dziekanacie, zapisać się do biblioteki, trafić na zajęcia, znaleźć mieszkanie. Samej byłoby jej trudno, bo nie znała polskiego – wspomina Ola. Była mentorką – osobą, która pomaga zagranicznym stypendystom odnaleźć się na uczelni i w mieście. Takiego opiekuna dostaje każdy cudzoziemiec na Uniwersytecie Warszawskim. Podobnie też jest w Szkole Głównej Handlowej.</p><p>Ten zwyczaj przyszedł z zachodnich uczelni, na które co roku przyjeżdża wielu studentów z całego świata. Coraz więcej przybywa ich też do Polski. Polscy studenci zgłaszają się, żeby polepszyć swój angielski albo inny język. W ankiecie zgłoszeniowej podają, jaki język znają i jaka ma być płeć ich podopiecznego. Bo mentorowanie szybko zmienia się we wspólne spotkania, imprezy, przyjaźń, a czasem nawet w coś więcej…</p><p>Kiedy zdarza się, że opiekun nie może zająć się studentem, do akcji wkracza Grupa Szybkiego Reagowania. Zastępuje mentora, by student obcokrajowiec nie czuł się zagubiony w mieście.</p><p>– Zaprzyjaźniłyśmy się z Martiną. Spędziła w moim domu Wielkanoc. Chociaż moja mama nie zna włoskiego ani angielskiego, świetnie się porozumiewała z Martiną i bardzo się polubiły – wspomina Ola. Mentorska znajomość przetrwała wakacje: piszą do siebie maile, a za pół roku będą się spotykały we Włoszech. Ola wyjeżdża na stypendium do Rzymu. I tam, jako zagraniczna stypendystka, będzie miała okazję zobaczyć, jak wygląda praca mentora od drugiej strony.</p>",
+              "0":{
+                "question":"0. Ola poznała Martinę na wakacjach, które spędzała w Bolonii. ",
+                "answer":"f"
+              },
               "1":{
                 "question":"1. Martina mogła sobie nie poradzić sama ze znalezieniem mieszkania.",
                 "answer":"p"
@@ -97,16 +107,58 @@
               "answer":"f"}
             },
             "part3": {
+              "instructions":"III. Proszę - zgodnie z podanym przykładem - wypełnić puste miejsca. Możesz użyć funkcji kopiowania i wklejania, po prostu kliknij frazę w polu tekstowym, aby skopiować, a następnie kliknij przycisk obok każdego pustego miejsca do wklejenia.",
+              "instructions2":"Możesz użyć funkcji kopiowania i wklejania, po prostu kliknij frazę w polu tekstowym, aby skopiować, a następnie kliknij przycisk obok każdego pustego miejsca, aby wkleić.",
+              "title":"Spacery",
               "choices":{
-                "1": "pomieszczeniach: mieszkaniach, biurach, fabrykach",
-                "2": "dzieciom, ludziom młodym oraz osobom starszym",
-                "3": "wydawania pieniędzy na siłownię czy aerobik",
-                "4": "miejscach zielonych i spokojnych, z daleka od dróg",
-                "5": "na spacer można się wybrać o każdej porze dnia",
-                "6": "na spacer, wolimy siedzieć w domu i",
-                "7": "osobom starszym, z różnymi problemami zdrowotnymi",
-                "8": "zwiększa naszą kondycję fizyczną"
+                "A": "pomieszczeniach: mieszkaniach, biurach, fabrykach",
+                "B": "dzieciom, ludziom młodym oraz osobom starszym",
+                "C": "wydawania pieniędzy na siłownię czy aerobik",
+                "D": "miejscach zielonych i spokojnych, z daleka od dróg",
+                "E": "na spacer można się wybrać o każdej porze dnia",
+                "F": "na spacer, wolimy siedzieć w domu i",
+                "G": "osobom starszym, z różnymi problemami zdrowotnymi",
+                "H": "zwiększa naszą kondycję fizyczną"
+              },
+              "text":"<p>Obecnie większość czasu spędzamy w <Blank id={'0'} answer='0' example='pomieszczeniach: mieszkaniach, biurach, fabrykach' submitted={isSubmitted}/>. Unikamy wysiłku, nie chodzimy na piechotę, a w wolnym czasie zamiast na przykład pójść <Blank id={'1'} submitted={isSubmitted}/> oglądać telewizję. Tak jest nam wygodniej. </p> <p> Jeśli chcesz poprawić kondycję fizyczną bez <Blank id={'2'} submitted={isSubmitted}/>, wybierz łatwy i tani sposób, czyli spacer. Ruch potrzebny jest wszystkim <Blank id={'3'} submitted={isSubmitted}/>. Największym plusem spacerów jest to, że nie musimy kupować żadnego specjalistycznego sprzętu. Trzeba mieć tylko wygodne buty. Co więcej, <Blank id={'4'} submitted={isSubmitted}/> i przy każdej pogodzie. Najlepiej spacerować w <Blank id={'5'} submitted={isSubmitted}/> i miejskiego ruchu – człowiek najlepiej wypoczywa na łonie przyrody. </p> <p>Już jedna godzina spaceru dziennie <Blank id={'6'} submitted={isSubmitted}/>. Powinien to być jednak wtedy intensywny marsz, w tempie 5 – 6 kilometrów na godzinę. </p> <p>Odmianą spaceru jest popularny także w Polsce nordic walking, czyli dynamiczny marsz z kijkami. Ogromną zaletą tej formy ruchu jest to, że można go polecić wszystkim, a zwłaszcza <Blank id={'7'} submitted={isSubmitted}/>. Jest on bowiem bezpieczną formą aktywności, połączonej ze spędzaniem czasu na świeżym powietrzu. </p>"
+
+            },
+            "part4":{
+              "instructions":"IV. Proszę - zgodnie z podanym przykładem - wypełnić puste miejsca. Możesz użyć funkcji kopiowania i wklejania, po prostu kliknij frazę w polu tekstowym, aby skopiować, a następnie kliknij przycisk obok każdego pustego miejsca do wklejenia.",
+              "title":"Jak zachęcić dziecko do czytania? Oto kilka wskazówek dla rodziców",
+              "choices":{
+                "0":"List do autora",
+                "1":"Lektura w wannie",
+                "2":"Własna półka na książki",
+                "3":"Propozycja nie wybór",
+                "4":"Wieczór z bajką",
+                "5":"Dobry przykład",
+                "6":"Cierpliwość",
+                "7":"Nie ma oglądania bez czytania"
+              },
+              "sentences":{
+                "0":"Starsze dzieci zachęćcie do napisania listu lub e-maila do pisarza, którego książka je zaciekawiła.",
+                "1":"Na czytanie wykorzystujcie różne okoliczności. Może to być czas posiłków lub nawet kąpiel.",
+                "2":"Miejsce, gdzie stoją ulubione książki, powinno być na odpowiedniej wysokości dla dziecka.",
+                "3":"Nie pytajcie, czy dziecko woli czytanie, czy oglądanie telewizji. Po prostu siadajcie obok siebie i czytajcie.",
+                "4":"Zachęcajcie dzieci, aby czytały na głos. Możecie zaplanować raz w miesiącu kolację z historią czytaną przez dziecko.",
+                "5":"Dziecko, które widzi rodziców z książką, chętniej będzie szukać czegoś do czytania.",
+                "6":"Pamiętajcie, że słuchania należy się uczyć. Nie denerwujcie się, gdy na początku dziecko nie potrafi się skoncentrować.",
+                "7":"Umówcie się z dzieckiem, że będzie mogło posiedzieć 15 minut przed telewizorem, jeśli spędzi 30 minut z książką."
+              },
+              "Answers":{
+                "0":"0",
+                "1":"6",
+                "2":"5",
+                "3":"7",
+                "4":"2",
+                "5":"1",
+                "6":"4",
+                "7":"3"
               }
+            },
+            "part5":{
+              "instructions": "V. Proszę wybrać i podkreślić najlepszą z trzech możliwości podanych w nawiasach zgodnie z przykładem. "
             }
 
             }

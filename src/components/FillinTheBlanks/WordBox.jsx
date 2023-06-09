@@ -1,0 +1,39 @@
+import React, { useEffect, useState } from 'react';
+import CopyButton from './CopyButton';
+import Grid from '@mui/material/Grid';
+import Box from '@mui/material/Box';
+
+export default function WordBox({ textArray, isReset, submitted }) {
+  const [shuffledArray, setShuffledArray] = useState([]);
+
+  useEffect(() => {
+    const shuffleWords = () => {
+      const newArray = [...textArray];
+      for (let i = newArray.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [newArray[i], newArray[j]] = [newArray[j], newArray[i]];
+      }
+      setShuffledArray(newArray);
+    };
+
+    shuffleWords();
+  }, []); // Empty dependency array ensures it runs only once on page load
+
+  return (
+    <>
+      <Box sx={{ flexGrow: 1 }}>
+        <Grid container spacing={1} sx={{ m: 2, pr: 0.75 }}>
+          {shuffledArray.map((text, index) => (
+            <CopyButton
+              text={text}
+              example={index === 0}
+              key={index}
+              isReset={isReset}
+              submitted={submitted}
+            />
+          ))}
+        </Grid>
+      </Box>
+    </>
+  );
+}

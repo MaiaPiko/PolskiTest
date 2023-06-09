@@ -1,5 +1,6 @@
 :root{
   --background: rgb(251, 239, 225);
+  --text-color: rgb(50 50 50);
 }
 
 
@@ -13,27 +14,22 @@ body {
   background-color: antiquewhite;
 }
 
+
+.border-paper{
+  border: 1px solid var(--background);
+}
+
+.border-grey{
+  border: 1px solid rgb(214, 208, 208);
+}
+
 .small {
   background-color: var(--background) !important;
 }
 
-.basket{
-  background-color: blue !important;
+
+.text{
+  color: var(--text-color);
 }
 
-.pets{
-  background-color: aqua;
-}
-
-.pet-card{
-  background-color: blueviolet;
-}
-
-.magnetic {
-  transition: transform 0.2s ease-in-out;
-}
-
-.magnetic:hover {
-  transform: scale(1.1); /* Optional: Add scaling effect on hover */
-}
 

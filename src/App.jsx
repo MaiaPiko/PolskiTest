@@ -18,6 +18,7 @@ import "@fontsource/poppins/500.css";
 import "@fontsource/poppins/400-italic.css"; // Specify weight and style
 
 function App() {
+  // window.addEventListener('beforeunload', sessionStorage.clear());
 
 
   return (
@@ -26,9 +27,9 @@ function App() {
       <BrowserRouter>
       <Routes>
         <Route path="/" element={<Layout />}>
-          <Route index element={<Home/>} />
+          <Route index element={<Reading/>} />
           <Route path="/reading" element={<Reading />} />
-          <Route path="*" element={<Home />} />
+          <Route path="*" element={<Reading />} />
       
         </Route>
       </Routes>
