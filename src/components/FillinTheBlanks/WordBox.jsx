@@ -2,11 +2,13 @@ import React, { useEffect, useState } from 'react';
 import CopyButton from './CopyButton';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
+import useMediaQuery from '@mui/material/useMediaQuery';
 
 export default function WordBox({ textArray, isReset, submitted }) {
   const [shuffledArray, setShuffledArray] = useState([]);
-
+  const matches = useMediaQuery('(max-width:600px)');
   useEffect(() => {
+   
     const shuffleWords = () => {
       const newArray = [...textArray];
       for (let i = newArray.length - 1; i > 0; i--) {
@@ -22,7 +24,7 @@ export default function WordBox({ textArray, isReset, submitted }) {
   return (
     <>
       <Box sx={{ flexGrow: 1 }}>
-        <Grid container spacing={1} sx={{ m: 2, pr: 0.75 }}>
+      <Grid container spacing={1} sx={{ m: matches ? 0 : 2, pr: 0.75, p:1}}>
           {shuffledArray.map((text, index) => (
             <CopyButton
               text={text}

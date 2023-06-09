@@ -21,7 +21,7 @@ const CopyButton = ({ text, isReset, example=false, submitted }) => {
     textDecoration: isClicked || example ? "line-through" : "none"
   };
 
-  // Reset the isClicked state when isReset changes
+
   React.useEffect(() => {
     setIsClicked(false);
   }, [isReset]);
@@ -29,7 +29,7 @@ const CopyButton = ({ text, isReset, example=false, submitted }) => {
   return (
     <div>
       <Button  ref={buttonRef} onClick={copyText} style={buttonStyle} className="small"sx={{m:0.5, color:'rgb(50 50 50)',  textTransform: 'none'}} disabled={submitted}  >
-      <ContentCopyIcon sx={{fontSize:"0.85em"}} color="success"/>{text}
+      <ContentCopyIcon sx={{fontSize:"0.85em", pr:0.5}} color="success"/>{text}
       </Button>
     </div>
   );
