@@ -13,9 +13,9 @@
             "text": "0. Letni hotel dla zwierząt to już nic nowego. Jeśli wyjeżdżamy na urlop, a nie mamy kogoś, kto mógłby się zająć naszymi kwiatkami, możemy zostawić je w hotelu dla roślin. Gdy nasze kwiaty nie lubią zmian, możemy wynająć firmę, która będzie dbać o nie na miejscu.",
             "question": "0. Ten tekst informuje, że:",
             "choices": {
-              "a": "a) hotele dla zwierząt zaopiekują się również kwiatami.",
-              "b": "b) specjalne firmy mogą dbać o kwiaty i zwierzęta w domu.",
-              "c": "c) rośliny można oddać do hotelu.",
+              "a": " hotele dla zwierząt zaopiekują się również kwiatami.",
+              "b": " specjalne firmy mogą dbać o kwiaty i zwierzęta w domu.",
+              "c": " rośliny można oddać do hotelu.",
               "answer": "c"
             }
           },
@@ -23,9 +23,9 @@
             "text": "1. Każdy, kto będzie chciał skorzystać z Internetu, będzie mógł to zrobić w kiosku internetowym. Na razie jest ich kilka, ale wkrótce mają się znajdować w wielu miejscach w kraju",
             "question": "1. Ten tekst informuje, że:",
             "choices": {
-              "a": "a) kioski internetowe są popularne w całym kraju.",
-              "b": "b) w kiosku z gazetami można skorzystać z Internetu",
-              "c": "c) kioski internetowe oferują dostęp do Internetu.",
+              "a": " kioski internetowe są popularne w całym kraju.",
+              "b": " w kiosku z gazetami można skorzystać z Internetu",
+              "c": " kioski internetowe oferują dostęp do Internetu.",
               "answer":"c"
             }
           },
@@ -33,9 +33,9 @@
             "text":"2. Kluby aktywnego poszukiwania pracy są jedną z form pomocy dla bezrobotnych. Mają one za zadanie pobudzić ich i zmotywować do bardziej aktywnego poszukiwania pracy oraz wzbogacić o potrzebne wiadomości i umiejętności.",
             "question":"2. Z tego tekstu wynika, że kluby:",
             "choices":{
-                "a":" a) dają bezrobotnym pracę.",
-                "b":" b) uczą, jak efektywniej poszukiwać pracy.",
-                "c":" c) oferują bezrobotnym pomoc materialną. ",
+                "a":"  dają bezrobotnym pracę.",
+                "b":"  uczą, jak efektywniej poszukiwać pracy.",
+                "c":"  oferują bezrobotnym pomoc materialną. ",
                 "answer":"b"
             }
             },
@@ -43,9 +43,9 @@
                 "text": "3. W Polsce na początku lat 90. na chipsy przerabiano kilka tysięcy ton ziemniaków rocznie. Teraz – 270 tys. ton. Statystyczny Polak zjada w ciągu roku kilogram chipsów, Brytyjczyk aż pięć kilo.",
                 "question":"3. Z tego tekstu wynika, że:",
                 "choices":{
-                    "a":" a) Polacy i Brytyjczycy jedzą najwięcej chipsów.",
-                    "b":" b) w Polsce je się coraz więcej chipsów.",
-                    "c":" c) Polacy jedzą chipsy od lat 90.",
+                    "a":" Polacy i Brytyjczycy jedzą najwięcej chipsów.",
+                    "b":" w Polsce je się coraz więcej chipsów.",
+                    "c":" Polacy jedzą chipsy od lat 90.",
                     "answer":"b"
                 }
             },
@@ -53,18 +53,18 @@
                 "text":"4. Doskonale pamiętam, jak ciężko mi było z dala od Polski. Pierwsze kilka lat w USA to była ciągła tęsknota i brak przyjaciół. Wtedy, w ciężkich chwilach ciocia powtarzała mi stale, że jak mi się tu nie podoba, to mogę wracać.",
                 "question": "4. Z tego tekstu wynika, że narrator:",
                 "choices":{
-                    "a":" a) miał ciotkę w USA.",
-                    "b":" b) tęsknił za USA.",
-                    "c":" c) wyemigrował z USA.",
+                    "a":" miał ciotkę w USA.",
+                    "b":" tęsknił za USA.",
+                    "c":" wyemigrował z USA.",
                     "answer":"a"
                 }
                 },
             "5":{"text":"5. Jeśli chcesz wziąć kredyt studencki, musisz mieć konto w banku. Stypendia i pieniądze od rodziców lepiej trzymać na koncie niż w skarpecie schowanej w akademiku.",
             "question":"5. Ten tekst informuje, że:",
             "choices":{
-                "a":" a) każdy student musi mieć konto.",
-                "b":" b) należy przechowywać pieniądze w domu akademickim.",
-                "c":" c) banki dadzą kredyt tylko właścicielowi konta.",
+                "a":"  każdy student musi mieć konto.",
+                "b":"  należy przechowywać pieniądze w domu akademickim.",
+                "c":"  banki dadzą kredyt tylko właścicielowi konta.",
                 "answer":"c"
             }
 

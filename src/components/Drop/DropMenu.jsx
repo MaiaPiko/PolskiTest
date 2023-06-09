@@ -36,7 +36,7 @@ export default function DropMenu({ choice1, choice2, choice3, answer, submitted,
       <div style={{ display: 'inline-flex' }}>
         <FormControl sx={{ minWidth: choice?'fit-content':'6em', mb: 2, width:id==="0"&&"9em" }} size="small" >
         <InputLabel id={id} >
-        {id === "0" ? answer : (!choice ? ".........." : id)}
+        {id === "0" ? answer : (!choice ? ".........." : "--")}
           </InputLabel>
           <Select
             labelId={id}
