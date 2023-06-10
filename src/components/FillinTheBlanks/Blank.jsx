@@ -1,23 +1,19 @@
 import React, { useState, useRef, useEffect } from 'react';
 import ContentPasteGoIcon from '@mui/icons-material/ContentPasteGo';
 import { useDispatch, useSelector } from 'react-redux';
-import { addPoint, noPoint } from '../../features/score/scoreSlice';
+import { addHalfPoint, addPoint, noPoint } from '../../features/score/scoreSlice';
 import CheckMark from '../CheckMark';
 import CrossMark from '../CrossMark';
 
-export default function Blank({ id, answer, submitted, example, reset }) {
+export default function Blank({ id, answer, submitted, example, reset, half = false }) {
   const dispatch = useDispatch();
   const points = useSelector((state) => state.point.points);
 
   const [paste, setPaste] = useState('');
   const [result, setResult] = useState(null); // Track the result (check mark or cross mark)
   const [inputValue, setInputValue] = useState(''); // Track the input field value
-  const [isReset, setIsReset] = useState(false)
+  const [isReset, setIsReset] = useState(false);
   const slotRef = useRef(null);
-
-
-
-
 
   const getTextContent = () => {
     if (slotRef.current) {
@@ -35,7 +31,6 @@ export default function Blank({ id, answer, submitted, example, reset }) {
   };
 
   const handleClick = () => {
-
     navigator.clipboard.readText().then((clipboardText) => {
       setPaste(clipboardText);
       setInputValue(clipboardText); // Update the input value state
@@ -48,15 +43,17 @@ export default function Blank({ id, answer, submitted, example, reset }) {
       const textContent = getTextContent();
       if (slotRef.current) {
         slotRef.current.innerHTML = textContent;
-        const isCorrect = textContent === correctAnswer;
+        const isCorrect = textContent == correctAnswer;
         if (isCorrect) {
-          dispatch(addPoint());
+          if (!half) {
+            dispatch(addPoint());
+          } else {
+            dispatch(addHalfPoint());
+          }
           setResult(
-            <>
-              <div style={{ display: "inline-flex" }}>
-                <CheckMark />
-              </div>
-            </>
+            <div style={{ display: "inline-flex" }}>
+              <CheckMark />
+            </div>
           );
         } else {
           dispatch(noPoint());
@@ -69,15 +66,13 @@ export default function Blank({ id, answer, submitted, example, reset }) {
   const handleReset = () => {
     setPaste('');
     setInputValue('');
-    
   };
 
   useEffect(() => {
     if (reset && id !== '0') {
       handleReset();
-      
     }
-  }, [reset, isReset]);
+  }, [reset]);
 
   return (
     <>
@@ -97,7 +92,6 @@ export default function Blank({ id, answer, submitted, example, reset }) {
         </button>
         {!submitted ? (
           <div
-            // id={id}
             style={{ minWidth: '8em', display: 'inline-block', margin: "2px" }}
             contentEditable={id !== "0"}
             onPaste={handlePaste}

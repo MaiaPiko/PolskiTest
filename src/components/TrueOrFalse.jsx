@@ -16,7 +16,7 @@ export default function TrueOrFlase({
   question,
   answer,
   submitted,
-  id
+  id,
 }) {
   const [selectedValue, setSelectedValue] = useState(null);
   const [isAnswered, setIsAnswered] = useState(false);

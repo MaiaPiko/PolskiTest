@@ -120,6 +120,7 @@
                 "G": "osobom starszym, z różnymi problemami zdrowotnymi",
                 "H": "zwiększa naszą kondycję fizyczną"
               },
+                "example":"pomieszczeniach: mieszkaniach, biurach, fabrykach",
               "text":"<p>Obecnie większość czasu spędzamy w <Blank id={'0'} answer='0' example='pomieszczeniach: mieszkaniach, biurach, fabrykach' submitted={isSubmitted}/>. Unikamy wysiłku, nie chodzimy na piechotę, a w wolnym czasie zamiast na przykład pójść <Blank id={'1'} submitted={isSubmitted}/> oglądać telewizję. Tak jest nam wygodniej. </p> <p> Jeśli chcesz poprawić kondycję fizyczną bez <Blank id={'2'} submitted={isSubmitted}/>, wybierz łatwy i tani sposób, czyli spacer. Ruch potrzebny jest wszystkim <Blank id={'3'} submitted={isSubmitted}/>. Największym plusem spacerów jest to, że nie musimy kupować żadnego specjalistycznego sprzętu. Trzeba mieć tylko wygodne buty. Co więcej, <Blank id={'4'} submitted={isSubmitted}/> i przy każdej pogodzie. Najlepiej spacerować w <Blank id={'5'} submitted={isSubmitted}/> i miejskiego ruchu – człowiek najlepiej wypoczywa na łonie przyrody. </p> <p>Już jedna godzina spaceru dziennie <Blank id={'6'} submitted={isSubmitted}/>. Powinien to być jednak wtedy intensywny marsz, w tempie 5 – 6 kilometrów na godzinę. </p> <p>Odmianą spaceru jest popularny także w Polsce nordic walking, czyli dynamiczny marsz z kijkami. Ogromną zaletą tej formy ruchu jest to, że można go polecić wszystkim, a zwłaszcza <Blank id={'7'} submitted={isSubmitted}/>. Jest on bowiem bezpieczną formą aktywności, połączonej ze spędzaniem czasu na świeżym powietrzu. </p>"
 
             },
@@ -162,9 +163,183 @@
             }
 
             }
-          }
+          },
 
+          "test2": {
+            "reading": {
+              "title": "Rozumienie tekstów pisanych",
+              "description":"Poniżej cała sekcja Rozumienie tekstów pisanych z przykładowego testu <a href='https://certyfikatpolski.pl/'>certyfikatpolski.pl<a> z 2019 roku. Wszystkie pytania i ćwiczenia zostały przekształcone w ćwiczenia interaktywne. Możesz się sprawdzić, uruchamiając poniższy stoper i przechodząc przez pytania. Po zakończeniu możesz zobaczyć swój wynik.<br>",
+              "part1": {
+                "instructions":"I. Proszę przeczytać akapity i zaznaczyć właściwe odpowiedzi zgodnie z podanym przykładem.",
+                "0":{
+                  "text":"0. W Polsce wszystkie supermarkety są zamknięte trzy niedziele w miesiącu. Czynne są tylko sklepy, w których sprzedaje właściciel, a także apteki, stacje paliw oraz punkty gastronomiczne czy usługowe, jak restauracje, kina czy poczta.",
+                  "question":"0. Z tego tekstu wynika, że w każdą niedzielę",
+                  "choices":{
+                    "a":"można pójść do restauracji",
+                    "b":"czynne są niektóre supermarkety",
+                    "c":"muszą pracować właściciele sklepów."
+                  },
+                  "answer":"a"
+                },
+                "1":{
+                  "text":"Jeśli masz ponad 30 lat i zarejestrowałeś się jako bezrobotny, możesz otrzymać pomoc finansową na otwarcie firmy. Projekt adresowany jest też do osób, które na rynku pracy znajdują się w trudnej sytuacji – są po 50. roku życia i mają niskie kwalifikacje.",
+                  "question":"1. Z tego tekstu wynika, że z projektu może skorzystać",
+                  "choices":{
+                    "a":" każdy, kto chce otworzyć własną firmę.",
+                    "b":" bezrobotny powyżej 30. roku życia.",
+                    "c":" bezrobotny powyżej 30. roku życia."
+                  },
+                  "answer":"b"
+                },
+                "2":{
+                  "text":"2. Od października działa nowy klub fitness. Przez pierwsze dwa tygodnie zajęcia grupowe prowadzone przez profesjonalnych instruktorów są bezpłatne. Do dyspozycji klientów jest też siłownia, szatnie z prysznicami i bufet.",
+                  "question":"2. Z tego tekstu wynika, że w klubie fitness",
+                  "choices":{
+                    "a":"po zajęciach można się wykąpać.",
+                    "b":" przez cały rok zajęcia są za darmo.",
+                    "c":"popularni instruktorzy prowadzą bufet."
+                  }, 
+                  "answer":"a"
+                },
+                "3":{
+                  "text":"4. Obraz Tamary Łempickiej „La Musicienne” został sprzedany w Nowym Jorku za blisko 9,1 mln dolarów (ponad 34 mln zł). Nikt nie myślał, że kwota będzie tak wysoka. Praca jest najdroższym w historii obrazem polskiego artysty.",
+                  "question":"Z tego tekstu wynika, że",
+                  "choices":{
+                    "a":" „La Musicienne” to najdroższy obraz na świecie.",
+                    "b":"cena obrazu była dla wszystkich zaskoczeniem.",
+                    "c":"obraz kupił amerykański biznesmen."
+                  }, 
+                  "answer":"b"
+                },
+                "4":{
+                  "text":"4. Już trzeci raz w rankingu gazety „Rzeczpospolita” najlepszą polską uczelnią ekonomiczną została Szkoła Główna Handlowa w Warszawie. W tegorocznym konkursie brało udział sześć uniwersytetów i 28 wydziałów. ",
+                  "question":"Z tego tekstu wynika, że",
+                  "choices":{
+                    "a":" w rankingu znalazło się 28 uczelni z całej Polski.",
+                    "b":" konkurs zorganizowały szkoły wyższe i media.",
+                    "c":"Szkoła Główna Handlowa niejednokrotnie wygrała ten konkurs."
+                  }, 
+                  "answer":"c"
+                }
+       
+              },
+              "part2":{
+                  "instructions":"II. Proszę przeczytać tekst, a następnie zaznaczyć: P – gdy zdanie jest prawdziwe, F – gdy jest fałszywe.",
+                  "title":"Spóźniony samolot",
+                  "text":"<p>W jaki sposób starać się o zwrot pieniędzy za bilet, kiedy nasz samolot się spóźnił lub w ogóle nie poleciał? Jedna z linii lotniczych podała informację, że w pierwszej połowie 2016 roku aż 256 jej lotów było opóźnionych o więcej niż 3 godziny. W takiej sytuacji, zgodnie z prawem Unii Europejskiej, pasażerowie mogą dostać zwrot pieniędzy za lot.</p> <p>– Trudno znaleźć dokładne statystyki spóźnionych samolotów, bo takich informacji nie podają linie lotnicze. To nie jest dla nich wygodne, aby pasażerowie mogli korzystać ze swoich praw – mówi adwokat Marcin Maciejewski.</p> <p>Według przepisów pasażer ma prawo do zwrotu pieniędzy, jeżeli rejs został odwołany na krócej niż 14 dni przed wylotem lub jest opóźniony o ponad 3 godziny. To, ile linie lotnicze nam zwrócą, zależy od długości lotu i może to być nawet 600 euro.</p> <p>– Pasażerowie często rezygnują i nie starają się o zwrot pieniędzy w przypadku spóźnionego lub anulowanego samolotu. Mówią, że to skomplikowane, nie znają prawa i muszą wypełnić dużo dokumentów – zauważa Maciejewski.</p> <p>Dlatego też szybko rozwijają się firmy, które pomagają pasażerom w otrzymaniu zwrotu pieniędzy. – Klient przekazuje nam skany dokumentów, podpisuje umowę i czeka na przelew, a sprawą zajmuje się wyspecjalizowana firma – mówi jeden z pracowników.</p>",
+                  "0":{
+                    "question":"0. Tekst mówi o opóźnionych lub odwołanych lotach.",
+                    "answer":"p"
+                  },
+                  "1":{
+                    "question":"W ciągu pół roku 256 lotów jednej z linii lotniczych było opóźnionych o ponad 3 godziny.",
+                    "answer":"p"
+                  },
+                  "2":{
+                    "question":"Według przepisów pasażerowie mogą otrzymać pieniądze za opóźniony lub odwołany lot.",
+                    "answer":"p"
+                  },
+                  "3":{
+                    "question":"Linie lotnicze regularnie publikują dane dotyczące faktycznych godzin lądowania ich samolotów.",
+                    "answer":"f"
+                  },
+                  "4":{
+                    "question":"Pieniądze za bilet mogą być zwrócone, jeśli lot odwołano na przykład tydzień przed wylotem.",
+                    "answer":"p"
+                  },
+                  "5":{
+                    "question":"Za anulowanie każdego biletu z winy linii lotniczych pasażerowie dostają 600 euro.",
+                    "answer":"f"
+                  },
+                  "6":{
+                    "question":"Formularze o zwrot kosztów pasażerowie wypełniają zazwyczaj starannie i szybko.",
+                    "answer":"f"
+                  },
+                  "7":{
+                    "question":"Pasażerowie mogą liczyć na pomoc specjalnych firm, jeśli chcą dostać pieniądze od linii lotniczych.",
+                    "answer":"p"
+                  }
+                },
+              
+                "part3": {
+                  "instructions":"III. Proszę - zgodnie z podanym przykładem - wypełnić puste miejsca. Możesz użyć funkcji kopiowania i wklejania, po prostu kliknij frazę w polu tekstowym, aby skopiować, a następnie kliknij przycisk obok każdego pustego miejsca do wklejenia.",
+                  "title":"",
+                  "choices":{
+                  "A":"A którzy bawili gości",
+                  "B":"bo pierwszy raz odbył się w 1260 roku",
+                  "C":"a jednocześnie jedna z największych w Europie",
+                  "D":"bo tutaj każdy znajduje coś dla siebie",
+                  "E":"i dopiero druga wojna światowa przerwała tę tradycję",
+                  "F":"których brakowało w tamtym czasie w sklepach",
+                  "G":"bo wszędzie coś się dzieje",
+                  "H":"i trwał czternaście dni",
+                  "I":"słuchają muzyki, robią pamiątkowe fotografie"
+                },
+                "answers":{
+                  "1":"H",
+                  "2":"A",
+                  "3":"E",
+                  "4":"F",
+                  "5":"C",
+                  "6":"D",
+                  "7":"I",
+                  "8":"G"
+                }
+            },
+            "part4":{
+              "instructions":"IV. Proszę - zgodnie z podanym przykładem - wypełnić puste miejsca. Możesz użyć funkcji kopiowania i wklejania, po prostu kliknij frazę w polu tekstowym, aby skopiować, a następnie kliknij przycisk obok każdego pustego miejsca do wklejenia.",
+              "title":"Jak polubić sprzątanie?",
+              "choices":{
+                "0":"Pozytywne myślenie ma znaczenie",
+                "1":"Ważny jest cel ",
+                "2":"Odpowiedni czas",
+                "3":"Najpierw to, co dla ciebie ważne",
+                "4":"Małe kroki ",
+                "5":"Dobry sprzęt i środki czystości",
+                "6":"Wykorzystaj czas "
+            },
+            "sentences":{
+              "0":"To klucz do tego, by polubić porządki. Możemy powtarzać, że znów trzeba sprzątać albo chcieć to zrobić i z przyjemnością myśleć o końcowym efekcie.",
+              "1":"Sprzątaj wtedy, kiedy masz na to ochotę. Warto wykorzystać dobry moment i po prostu zacząć sprzątać. Czy to będzie poniedziałek, czy środa, wieczór czy środek dnia, to nie ma znaczenia.",
+              "2":"Jedną z najsmutniejszych rzeczy przy sprzątaniu jest brak szybkich efektów. Dlatego ogromne znaczenie ma to, czym sprzątamy. Jest w czym wybierać, wiele produktów działa rewelacyjnie w krótkim czasie.",
+              "3":"Uporządkowanie jednej półki czy szuflady brzmi mniej strasznie niż posprzątanie całego mieszkania. To idealne rozwiązanie, gdy trudno nam się zmobilizować do sprzątania.",
+              "4":"Szkoda ci czasu na porządki? Podczas sprzątania możesz słuchać muzyki, audycji radiowych, a prasowanie można połączyć z oglądaniem ulubionego programu.",
+              "5":"Lubisz książki – wyczyść je i poukładaj np. kolorami, lubisz modę i ubrania, zrób porządek w szafie, kolekcjonujesz płyty – zrób ich listę, kochasz gotować – zacznij od sprzątania w kuchni czy posegregowania przepisów.",
+              "6":"To, dlaczego sprzątamy, jest najważniejsze. Czasami, bo przychodzą goście. Przede wszystkim jednak dlatego, że lubimy żyć w porządku, wtedy czujemy się lepiej i jesteśmy szczęśliwsi."
+
+            },
+      
+            "answers":{
+              "0":"0", 
+              "1":"2",
+              "2":"5",
+              "3":"4",
+              "4":"6",
+              "5":"3",
+              "6":"1"
+            }
+
+          },
+          "part5":{
+            "instructions":"V. Proszę – zgodnie z przykładem – uzupełnić tekst wyrazami z ramki.",
+            "choices":{
+              "0":"częścią",
+              "1":"pojawiło się",
+              "2":"wysokie",
+              "3":"nowych",
+              "4":"zorganizować",
+              "5":"mieszkańców",
+              "6":"książkę",
+              "7":"młodzieży",
+              "8":"wolność",
+              "9":" przyłączyło się",
+              "10":"popularne"
+
+            }
           }
+        }
+      }
+              }
         
   
   

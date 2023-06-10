@@ -11,32 +11,27 @@ import { useSelector, useDispatch } from 'react-redux';
 import { addPoint, noPoint } from "../features/score/scoreSlice";
 import Timer from "../components/Timer";
 import Stack from '@mui/material/Stack';
-import Card from '@mui/material/Card';
 import SectionCard from "../components/SectionCard";
 import parse from 'html-react-parser';
 import TrueOrFlase from "../components/TrueOrFalse";
 import { green } from '@mui/material/colors';
-import CopyButton from "../components/FillinTheBlanks/CopyButton";
 import WordBox from "../components/FillinTheBlanks/WordBox";
-import Blank from "../components/FillinTheBlanks/Blank";
-import JsxParser from 'react-jsx-parser'
 import RestartAltIcon from '@mui/icons-material/RestartAlt';
 import Part3Text from "../components/FillinTheBlanks/Part3Text";
-import DrDr from "../components/DragDrop/DrDr";
 import ExerciseRow from '../components/Grid/ExerciseRow';
 import ExerciseTable from '../components/Grid/ExerciseTable';
-import DropMenu from '../components/Drop/DropMenu';
 import Part5 from '../components/Drop/Part5';
 
 
 
 
 
-function Reading() {
+function ReadingTest1() {
   const dispatch = useDispatch();
   const points = useSelector((state) => state.point.points);
   const [isSubmitted, setIsSubmitted] = useState(false);
-
+  const [isReset, setIsReset] = useState(false);
+  const [isReset2, setIsReset2] = useState(false);
   const [inputValues, setInputValues] = useState({});
 
   const handleInputChange = (id, value) => {
@@ -91,8 +86,7 @@ for (let i=0; i < 8; i++){
 }
 
 
-  const [isReset, setIsReset] = useState(false);
-  const [isReset2, setIsReset2] = useState(false);
+  
 
 
   const handleReset = () => {
@@ -125,15 +119,15 @@ for (let i=0; i < 8; i++){
     <>
     
     
-      <Container maxWidth="md">
+      <Container maxWidth="md" sx={{alignContent:"center"}}>
       <h2 style={{textAlign:"center"}}>{content.test1.reading.title}</h2>
-      <h5 style={{textAlign:"center"}}>{parse(content.test1.reading.description)}</h5>
+      <p style={{textAlign:"justify"}}>{parse(content.test1.reading.description)}</p>
       <Timer minutes={45}/>
         <Instructions text={content.test1.reading.part1.instructions} />
         <p style={{fontSize:"0.75em"}}>{content.scoreValue[1]}</p>
         <SectionCard>
         
-        <Stack spacing={2} sx={{my: 5}}>
+        <Stack spacing={2} sx={{my: 5,}}>
         
         {set1}
         </Stack>
@@ -158,12 +152,9 @@ for (let i=0; i < 8; i++){
 
       <SectionCard>
       <Stack sx={{alignContent:"center"}}>
-      <WordBox textArray={Object.values(content.test1.reading.part3.choices)} isReset={isReset} submitted={isSubmitted}/>
+      <WordBox textArray={Object.values(content.test1.reading.part3.choices)} isReset={isReset} submitted={isSubmitted} example={content.test1.reading.part3.example}/>
  
-      <Container 
-      maxWidth="md"
-      sx={{  }}
-      >
+      <Container maxWidth="md">
       <p style={{textAlign:"center", fontWeight:500}}>{content.test1.reading.part3.title}</p>
 
         <div style={{fontSize:"1em", padding:"1em"}}>   
@@ -174,9 +165,7 @@ for (let i=0; i < 8; i++){
           <RestartAltIcon />
           </button>
           </div>
-          </div>
-
-        
+          </div>        
         </Container>
         </Stack>
         </SectionCard>
@@ -187,8 +176,9 @@ for (let i=0; i < 8; i++){
    
         <Stack sx={{alignContent:"center"}}>
         <SectionCard>
-        <Container sx={{}}>
-        <WordBox textArray={Object.values(content.test1.reading.part4.choices)} isReset={isReset2} submitted={isSubmitted}/>
+        <Container>
+        <WordBox textArray={Object.values(content.test1.reading.part4.choices)} isReset={isReset2} submitted={isSubmitted} 
+        example={content.test1.reading.part4.choices[0]}/>
         <p style={{textAlign:"center", fontWeight:500}}>{content.test1.reading.part4.title}</p>
 
         <ExerciseTable rows={rows}/>
@@ -205,7 +195,7 @@ for (let i=0; i < 8; i++){
         <p style={{fontSize:"0.75em"}}>{content.scoreValue[0.5]}</p>
 
       <SectionCard>
-      <Container sx={{}}>
+      <Container >
         <Part5 submitted={isSubmitted}/>
        </Container>
         </SectionCard>
@@ -223,4 +213,4 @@ for (let i=0; i < 8; i++){
   );
 }
 
-export default Reading;
+export default ReadingTest1;

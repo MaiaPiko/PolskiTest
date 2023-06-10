@@ -4,7 +4,7 @@ import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import useMediaQuery from '@mui/material/useMediaQuery';
 
-export default function WordBox({ textArray, isReset, submitted }) {
+export default function WordBox({ textArray, isReset, submitted, example }) {
   const [shuffledArray, setShuffledArray] = useState([]);
   const matches = useMediaQuery('(max-width:600px)');
   useEffect(() => {
@@ -28,7 +28,7 @@ export default function WordBox({ textArray, isReset, submitted }) {
           {shuffledArray.map((text, index) => (
             <CopyButton
               text={text}
-              example={index === 0}
+              example={example}
               key={index}
               isReset={isReset}
               submitted={submitted}

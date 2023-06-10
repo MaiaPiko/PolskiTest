@@ -1,16 +1,12 @@
-
-
-
+import React from 'react';
+import NavButton from '../components/NavButton';
 
 function Home() {
-
-
   return (
-    <>
-        <h1>A home page, in case I decide to add to the project in the future.</h1>
-
-    </>
-  )
+    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
+      <NavButton />
+    </div>
+  );
 }
 
 export default Home;
