@@ -53,7 +53,7 @@ body {
 }
 
 a{
-  color:var(--text-color)
+  color:var(--green)
 }
 
 a:hover{
