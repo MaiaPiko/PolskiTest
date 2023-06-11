@@ -50,7 +50,7 @@ function TopNav() {
          <Divider sx={{mt:5}}>
 
 <Link to="/">
-  <HomeIcon sx={{ color: 'gray', fontSize:"1.8em" }} className='link'/>
+  <HomeIcon className='nav link' sx={{  fontSize:"1.8em" }}/>
 </Link>
 
 </Divider>
@@ -61,17 +61,17 @@ function TopNav() {
         }}
       >
     
-        <Divider>
-          <h3 style={{color:"gray"}}>Testy</h3>
+        <Divider className='nav'>
+          <h3 >Testy</h3>
         </Divider>
         <List>
           {['Test 1', 'Test 2'].map((text, index) => (
             <ListItem key={text} disablePadding>
               <ListItemButton component={Link} to={`/test/${index + 1}`}>
                 <ListItemIcon>
-                  <QuizIcon />
+                  <QuizIcon className='nav link'/>
                 </ListItemIcon>
-                <ListItemText primary={text} />
+                <ListItemText primary={text} className='nav' />
               </ListItemButton>
             </ListItem>
           ))}

@@ -120,7 +120,7 @@ for (let i=0; i < 8; i++){
     
     
       <Container maxWidth="md" sx={{alignContent:"center"}}>
-      <h2 style={{textAlign:"center"}} className='text'>{content.test1.reading.title} </h2>
+      <h2 style={{textAlign:"center"}} className='text'>{parse(content.test1.reading.title)} </h2>
       <p className='text' style={{textAlign:"justify"}}>{parse(content.test1.reading.description)}</p>
       <Timer minutes={45}/>
         <Instructions text={content.test1.reading.part1.instructions} />

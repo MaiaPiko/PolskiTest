@@ -1,6 +1,6 @@
 :root{
   --darek:#e6effa;
-  --background: #25324a;;
+  --background: #25324a;
   --text-color: rgba(254, 255, 254, 0.883);
   --green: #388e3c;
 }
@@ -17,6 +17,10 @@ button:hover {
 
 .link:hover{
 color: green;
+}
+
+.nav{
+  color: var(--background)
 }
 
 .button:hover{
