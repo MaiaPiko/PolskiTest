@@ -12,14 +12,16 @@ import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
-import MailIcon from '@mui/icons-material/Mail';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import QuizIcon from '@mui/icons-material/Quiz';
+import QuestionMarkIcon from '@mui/icons-material/QuestionMark';
+import Container from '@mui/material/Container';
+import useMediaQuery from '@mui/material/useMediaQuery';
 
 function TopNav() {
   const [open, setOpen] = useState(false);
+  const matches = useMediaQuery('(max-width:1600px)');
 
   const toggleDrawer = (isOpen) => (event) => {
     if (
@@ -34,45 +36,69 @@ function TopNav() {
   };
 
   const list = () => (
-    <Box
-      sx={{ width: 250 }}
+    <div
+      style={{
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        // height: '40%',
+      }}
       role="presentation"
       onClick={toggleDrawer(false)}
       onKeyDown={toggleDrawer(false)}
     >
-      <Divider>
-        <p>Testy</p>
-      </Divider>
-      <List>
-        {['Test 1', 'Test 2', 'Test 3', 'About'].map((text, index) => (
-          <ListItem key={text} disablePadding>
-            <ListItemButton component={Link} to={`/test/${index + 1}`}>
-              <ListItemIcon>
-                <QuizIcon />
-              </ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItemButton>
-          </ListItem>
-        ))}
-      </List>
-      <Divider />
-    </Box>
+         <Divider sx={{mt:5}}>
+
+<Link to="/">
+  <HomeIcon sx={{ color: 'gray', fontSize:"1.8em" }} className='link'/>
+</Link>
+
+</Divider>
+      <Box
+        sx={{
+          width: 250,
+          margin: 'auto', // Center horizontally
+        }}
+      >
+    
+        <Divider>
+          <h3 style={{color:"gray"}}>Testy</h3>
+        </Divider>
+        <List>
+          {['Test 1', 'Test 2'].map((text, index) => (
+            <ListItem key={text} disablePadding>
+              <ListItemButton component={Link} to={`/test/${index + 1}`}>
+                <ListItemIcon>
+                  <QuizIcon />
+                </ListItemIcon>
+                <ListItemText primary={text} />
+              </ListItemButton>
+            </ListItem>
+          ))}
+        </List>
+        <Divider />
+         
+     
+      </Box>
+    </div>
   );
 
   return (
-    <Box sx={{ flexGrow: 1, p: 2 }}>
+    
+
+    <Box sx={{ flexGrow: 1, p: 2, height:50 }}>
       <AppBar
         position="absolute"
-        sx={{ top: -10, backgroundColor: 'transparent', boxShadow: 'none', mx:0 }}
+        sx={{ top: -10, backgroundColor: 'transparent', boxShadow: 'none', mx: 0 }}
       >
         <Toolbar>
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+          <Typography variant="h6" component="div" sx={{ ml: 2 , mt:1, flexGrow: 1 }}>
             <Link to="/">
-              <HomeIcon sx={{ color: 'gray', ml:2 }} />
+              <HomeIcon sx={{  ml: 2 }} className='text link'/>
             </Link>
           </Typography>
-          <IconButton onClick={toggleDrawer(true)}>
-            <MenuIcon />
+          <IconButton onClick={toggleDrawer(true)} sx={{mr:   2}}>
+            <MenuIcon className='text link'/>
           </IconButton>
           <Drawer anchor="right" open={open} onClose={toggleDrawer(false)}>
             {list()}
@@ -80,6 +106,7 @@ function TopNav() {
         </Toolbar>
       </AppBar>
     </Box>
+
   );
 }
 

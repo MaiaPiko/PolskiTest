@@ -34,8 +34,8 @@ const CopyButton = ({ text, isReset, example, submitted }) => {
   return (
     <>
     <div>
-      <Button  ref={buttonRef} onClick={copyText} style={buttonStyle} className="small"sx={{m:0.5, color:'rgb(50 50 50)',  textTransform: 'none'}} disabled={submitted}  >
-      <ContentCopyIcon sx={{fontSize:"0.85em", pr:0.5}} color="success"/>{text}
+      <Button  ref={buttonRef} onClick={copyText} style={buttonStyle} className="small button"sx={{m:0.5, color:'rgb(50 50 50)',  textTransform: 'none', textAlign:"justify"}} disabled={submitted}  >
+      <ContentCopyIcon sx={{fontSize:"0.85em", pr:0.5}} color="success"/><span className="text">{text}</span>
       </Button>
     </div>
     <div>

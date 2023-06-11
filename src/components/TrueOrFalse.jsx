@@ -10,6 +10,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { addPoint, noPoint } from '../features/score/scoreSlice';
 import CheckMark from './CheckMark';
 import CrossMark from './CrossMark';
+import { green } from '@mui/material/colors';
 
 
 export default function TrueOrFlase({
@@ -22,7 +23,7 @@ export default function TrueOrFlase({
   const [isAnswered, setIsAnswered] = useState(false);
   const dispatch = useDispatch();
   const points = useSelector((state) => state.point.points);
-  
+  const radioColor = green[700]
 
   useEffect(() => {
     if (submitted && !id=="0") {
@@ -51,8 +52,8 @@ export default function TrueOrFlase({
           onChange={handleChange}
           sx={{ ":disabled": { submitted: true } }}
           >
-          <FormControlLabel value="p" control={<Radio />} label="P"disabled={submitted || id=="0"}/>
-          <FormControlLabel value="f" control={<Radio />} label="F" disabled={submitted || id=="0"}/>
+          <FormControlLabel value="p" control={<Radio />} label="P"disabled={submitted || id=="0"} sx={{  "& .Mui-checked": {color:radioColor}}}/>
+          <FormControlLabel value="f" control={<Radio />} label="F" disabled={submitted || id=="0"} sx={{  "& .Mui-checked": {color:radioColor}}}/>
         </RadioGroup>
       </FormControl>
       {submitted && id!="0" && (

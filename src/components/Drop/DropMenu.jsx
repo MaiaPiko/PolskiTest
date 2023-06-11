@@ -8,6 +8,7 @@ import { useDispatch } from 'react-redux';
 import { addPoint, noPoint, addHalfPoint } from '../../features/score/scoreSlice';
 import CheckMark from '../CheckMark';
 import CrossMark from '../CrossMark';
+import { green } from '@mui/material/colors';
 
 export default function DropMenu({ choice1, choice2, choice3, answer, submitted, id }) {
   const [choice, setChoice] = useState('');
@@ -30,6 +31,7 @@ export default function DropMenu({ choice1, choice2, choice3, answer, submitted,
       }
     }
   }, [choice, answer, submitted, dispatch]);
+  const className = id == "0" ? "green-text" : "";
 
   return (
     <>
@@ -45,12 +47,11 @@ export default function DropMenu({ choice1, choice2, choice3, answer, submitted,
             label={id}
             onChange={handleChange}
             disabled={submitted || id==="0"}
-       
-            
+            color= 'success'    
           >
-            <MenuItem value={choice1}>{choice1}</MenuItem>
-            <MenuItem value={choice2}>{choice2}</MenuItem>
-            <MenuItem value={choice3}>{choice3}</MenuItem>
+            <MenuItem value={choice1} className={className}>{choice1}</MenuItem>
+            <MenuItem value={choice2} className={className}>{choice2}</MenuItem>
+            <MenuItem value={choice3} className={className}>{choice3}</MenuItem>
           </Select>
         </FormControl>
         {result}

@@ -1,8 +1,33 @@
 :root{
-  --background: rgb(251, 239, 225);
-  --text-color: rgb(50 50 50);
+  --darek:#e6effa;
+  --background: #25324a;;
+  --text-color: rgba(254, 255, 254, 0.883);
+  --green: #388e3c;
 }
 
+.green-text{
+  /* color:var(--green) !important; */
+  color: var(--text-color);
+}
+
+button:hover {
+  cursor: pointer; /* Default hand cursor */
+  background-color: green;
+}
+
+.link:hover{
+color: green;
+}
+
+.button:hover{
+  background-color: var(--green) !important;
+}
+
+
+button:active {
+  background-color: var(--green);
+  /* Add any other styles you want to apply when the button is pressed */
+}
 
 body {
   font-family: "Poppins";
@@ -11,10 +36,10 @@ body {
 }
 
 .paper {
-  background-color: antiquewhite;
+  background-color: var(--background);
 }
 
-
+ 
 .border-paper{
   border: 1px solid var(--background);
 }
@@ -27,9 +52,27 @@ body {
   background-color: var(--background) !important;
 }
 
+a{
+  color:var(--text-color)
+}
+
+a:hover{
+  color:var(--green)
+}
+
+h2{
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+
+}
+
+h1, h3{
+  font-weight: 300;
+}
 
 .text{
   color: var(--text-color);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+
 }
 
 

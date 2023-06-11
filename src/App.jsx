@@ -1,5 +1,4 @@
 
-import './App.css'
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./pages/Layout";
@@ -10,13 +9,11 @@ import "@fontsource/poppins/400.css";
 import "@fontsource/poppins/100.css";
 import "@fontsource/poppins/200.css";
 import "@fontsource/poppins/300.css";
-import "@fontsource/poppins/500.css"; 
-
-
-
-
+import "@fontsource/poppins/500.css";
+import About from './pages/About'; 
 import "@fontsource/poppins/400-italic.css"; // Specify weight and style
 import ReadingTest2 from './pages/ReadingTest2';
+
 
 function App() {
   // window.addEventListener('beforeunload', sessionStorage.clear());

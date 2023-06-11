@@ -10,6 +10,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import { addPoint, noPoint } from '../features/score/scoreSlice';
 import CheckMark from './CheckMark';
 import CrossMark from './CrossMark';
+import { customRadio } from './Styles';
+import { green } from '@mui/material/colors';
 
 export default function MultipleChoice({
   question,
@@ -25,7 +27,8 @@ export default function MultipleChoice({
   const [isAnswered, setIsAnswered] = useState(false);
   const dispatch = useDispatch();
   const points = useSelector((state) => state.point.points);
-  
+  const radioColor = green[700];
+  const className = id == "0" ? "green-text" : "";
 
   useEffect(() => {
     if (submitted && !id=="0") {
@@ -52,14 +55,18 @@ export default function MultipleChoice({
           name="choices"
           value={id===0? answer: selectedValue}
           onChange={handleChange}
-          sx={{ ":disabled": { submitted: true || id=="0"} }}
+          sx={{ ":disabled": { submitted: true || id=="0"}, '&.Mui-checked': {
+            color: 'green',
+            backgroundColor:'green'
+          }, }}
           disabled = {id==="0"}
-     
+          className={className}
+       
 
           >
-          <FormControlLabel value="a" control={<Radio />} label={choiceA} disabled={submitted || id=="0"}/>
-          <FormControlLabel value="b" control={<Radio />} label={choiceB} disabled={submitted || id=="0"}/>
-          <FormControlLabel value="c" control={<Radio />} label={choiceC} disabled={submitted || id=="0"} />
+          <FormControlLabel value="a" control={<Radio />} label={choiceA} disabled={submitted || id=="0"} sx={{  "& .Mui-checked": {color:radioColor}}}/>
+          <FormControlLabel value="b" control={<Radio />} label={choiceB} disabled={submitted || id=="0"} sx={{  "& .Mui-checked": {color: radioColor}}}/>
+          <FormControlLabel value="c" control={<Radio />} label={choiceC} disabled={submitted || id=="0"} sx={{  "& .Mui-checked": {color: radioColor}}}/>
         </RadioGroup>
       </FormControl>
       {submitted && !id=="0" &&(

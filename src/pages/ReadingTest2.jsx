@@ -100,11 +100,11 @@ export default function ReadingTest2(){
     return(
         <>
         <Container maxWidth="md">
-      <h2 style={{textAlign:"center"}}>{content.test1.reading.title}</h2>
-      <p style={{textAlign:"justify"}}>{parse(content.test2.reading.description)}</p>
+      <h2 className='text' style={{textAlign:"center"}}>{parse(content.test2.reading.title)} </h2>
+      <p className='text' style={{textAlign:"justify"}}>{parse(content.test2.reading.description)}</p>
       <Timer minutes={45}/>
         <Instructions text={content.test2.reading.part1.instructions} />
-        <p style={{fontSize:"0.75em"}}>{content.scoreValue[1]}</p>
+        <p className='text' style={{fontSize:"0.75em"}}>{content.scoreValue[1]}</p>
         <SectionCard>
         
         <Stack spacing={2} sx={{my: 5,}}>
@@ -113,7 +113,7 @@ export default function ReadingTest2(){
         </Stack>
         </SectionCard>
         <Instructions text={content.test2.reading.part2.instructions} />
-        <p style={{fontSize:"0.75em"}}>{content.scoreValue[1]}</p>
+        <p className='text' style={{fontSize:"0.75em"}}>{content.scoreValue[1]}</p>
 
         <SectionCard>
         <Container maxWidth="sm" sx={{ px: 2 }}>
@@ -126,21 +126,21 @@ export default function ReadingTest2(){
         </Container>
       </SectionCard>
       <Instructions text={content.test2.reading.part3.instructions} />
-      <p style={{fontSize:"0.75em"}}>{content.scoreValue[1]}</p>
+      <p className='text' style={{fontSize:"0.75em"}}>{content.scoreValue[1]}</p>
 
       <SectionCard>
       <Stack sx={{alignContent:"center"}}>
       <WordBox textArray={Object.values(content.test2.reading.part3.choices)} isReset={isReset} submitted={isSubmitted}/>
  
       <Container maxWidth="md">
-      <p style={{textAlign:"center", fontWeight:500}}>{content.test2.reading.part3.title}</p>
+      <p  style={{textAlign:"center", fontWeight:500}}>{content.test2.reading.part3.title}</p>
 
         <div style={{fontSize:"1em", padding:"1em"}}>   
           <Test2Part3 isSubmitted={isSubmitted} isReset={isReset}/>
           <div style={{textAlign:"right"}}>
           <button onClick={handleReset} style={{border:"none", borderRadius: '5px',
             boxShadow: '0px 3px 15px rgba(0,0,0,0.2)',}} className="paper" disabled={isSubmitted}>
-          <RestartAltIcon />
+          <RestartAltIcon className='text' />
           </button>
           </div>
           </div>
@@ -150,7 +150,7 @@ export default function ReadingTest2(){
         </Stack>
          </SectionCard>
          <Instructions text={content.test2.reading.part4.instructions}  />
-         <p style={{fontSize:"0.75em"}}>{content.scoreValue[1]}</p>
+         <p className='text' style={{fontSize:"0.75em"}}>{content.scoreValue[1]}</p>
          <Stack sx={{alignContent:"center"}}>
         <SectionCard>
         <Container>
@@ -162,14 +162,14 @@ export default function ReadingTest2(){
         <div style={{textAlign:"right", padding:"5px"}}>
         <button onClick={handleReset2} style={{border:"none", borderRadius: '5px',
             boxShadow: '0px 3px 15px rgba(0,0,0,0.2)',}} className="paper" disabled={isSubmitted}>
-          <RestartAltIcon />
+          <RestartAltIcon className='text'/>
           </button>
           </div>
         </Container>
         </SectionCard>
         </Stack>
         <Instructions text={content.test2.reading.part5.instructions} />
-        <p style={{fontSize:"0.75em"}}>{content.scoreValue[0.5]}</p>
+        <p className='text' style={{fontSize:"0.75em"}}>{content.scoreValue[0.5]}</p>
         <SectionCard>
         <Stack sx={{alignContent:"center"}}>
        
@@ -183,7 +183,7 @@ export default function ReadingTest2(){
         <div style={{textAlign:"right"}}>
           <button onClick={handleReset3} style={{border:"none", borderRadius: '5px',
             boxShadow: '0px 3px 15px rgba(0,0,0,0.2)',}} className="paper" disabled={isSubmitted}>
-          <RestartAltIcon />
+          <RestartAltIcon className='text'/>
           </button>
           </div>
           </div>
@@ -196,7 +196,7 @@ export default function ReadingTest2(){
 
         <div style={{display:"flex", justifyContent: "center", alignItems: "center"}}>
   {!isSubmitted && (
-    <Button variant="contained" onClick={handleSubmit} sx={{backgroundColor:green[500], textAlign:"center", fontWeight: "bold", m:3}}>Oblicz wynik</Button> 
+    <Button color="success" variant="contained" onClick={handleSubmit} sx={{backgroundColor:green[500], textAlign:"center", fontWeight: "bold", m:3}}>Oblicz wynik</Button> 
   )}
   {isSubmitted && (<h3>{points}/30</h3>)}
 </div>

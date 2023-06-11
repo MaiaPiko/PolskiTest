@@ -35,13 +35,13 @@ const Timer = ({ minutes }) => {
       <Button
         variant="contained"
         onClick={handleToggleTimer}
-        style={{ backgroundColor: isRunning ? red[500] : green[500] }}
+        style={{ backgroundColor: isRunning ? red[500] : green[700] }}
       >
       <AccessTimeOutlinedIcon sx={{pr:2}}/> 
         {formatTime(seconds)}      
       </Button>
       
-      <p style={{fontSize:"0.75em"}}>Uruchom stoper, gdy będziesz gotowy!</p>
+      <p className='text' style={{fontSize:"0.75em"}}>Uruchom stoper, gdy będziesz gotowy!</p>
     </div>
   );
 };

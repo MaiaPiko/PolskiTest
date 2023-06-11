@@ -56,7 +56,7 @@ function ReadingTest1() {
 
       <Container key={i} maxWidth="sm" sx={{ px: 2 }}>
           <Stack spacing={2} >
-        <TextCard text={parse(content.test1.reading.part1[i].text)} />
+        <TextCard text={parse(content.test1.reading.part1[i].text)} id={i}/>
         <MultipleChoice
         id={i}
           question={content.test1.reading.part1[i].question}
@@ -76,7 +76,7 @@ for (let i=0; i < 8; i++){
   set2.push(
   <Container key={i} maxWidth="sm" sx={{ px: 0 }}>
   <Stack  sx={{m:2}} >
-    <TextCard text={content.test1.reading.part2[i].question}/>
+    <TextCard text={content.test1.reading.part2[i].question} id={i}/>
     <TrueOrFlase submitted={isSubmitted} answer={content.test1.reading.part2[i].answer} id={i}/>
   </Stack>
     </Container>
@@ -120,11 +120,11 @@ for (let i=0; i < 8; i++){
     
     
       <Container maxWidth="md" sx={{alignContent:"center"}}>
-      <h2 style={{textAlign:"center"}}>{content.test1.reading.title}</h2>
-      <p style={{textAlign:"justify"}}>{parse(content.test1.reading.description)}</p>
+      <h2 style={{textAlign:"center"}} className='text'>{content.test1.reading.title} </h2>
+      <p className='text' style={{textAlign:"justify"}}>{parse(content.test1.reading.description)}</p>
       <Timer minutes={45}/>
         <Instructions text={content.test1.reading.part1.instructions} />
-        <p style={{fontSize:"0.75em"}}>{content.scoreValue[1]}</p>
+        <p className='text' style={{fontSize:"0.75em"}}>{content.scoreValue[1]}</p>
         <SectionCard>
         
         <Stack spacing={2} sx={{my: 5,}}>
@@ -135,7 +135,7 @@ for (let i=0; i < 8; i++){
 
        
         <Instructions text={content.test1.reading.part2.instructions} />
-        <p style={{fontSize:"0.75em"}}>{content.scoreValue[1]}</p>
+        <p className='text' style={{fontSize:"0.75em"}}>{content.scoreValue[1]}</p>
 
         <SectionCard>
         <Container maxWidth="sm" sx={{ px: 2 }}>
@@ -148,7 +148,7 @@ for (let i=0; i < 8; i++){
         </Container>
         </SectionCard>
       <Instructions text={content.test1.reading.part3.instructions} />
-      <p style={{fontSize:"0.75em"}}>{content.scoreValue[1]}</p>
+      <p className='text' style={{fontSize:"0.75em"}}>{content.scoreValue[1]}</p>
 
       <SectionCard>
       <Stack sx={{alignContent:"center"}}>
@@ -162,7 +162,7 @@ for (let i=0; i < 8; i++){
           <div style={{textAlign:"right"}}>
           <button onClick={handleReset} style={{border:"none", borderRadius: '5px',
             boxShadow: '0px 3px 15px rgba(0,0,0,0.2)',}} className="paper" disabled={isSubmitted}>
-          <RestartAltIcon />
+          <RestartAltIcon className='text' />
           </button>
           </div>
           </div>        
@@ -171,7 +171,7 @@ for (let i=0; i < 8; i++){
         </SectionCard>
         <Instructions text={content.test1.reading.part4.instructions}  />
         {/* <Instructions text={content.test1.reading.part3.instructions2}/> */}
-        <p style={{fontSize:"0.75em"}}>{content.scoreValue[1]}</p>
+        <p className='text' style={{fontSize:"0.75em"}}>{content.scoreValue[1]}</p>
 
    
         <Stack sx={{alignContent:"center"}}>
@@ -185,14 +185,14 @@ for (let i=0; i < 8; i++){
         <div style={{textAlign:"right", padding:"5px"}}>
         <button onClick={handleReset2} style={{border:"none", borderRadius: '5px',
             boxShadow: '0px 3px 15px rgba(0,0,0,0.2)',}} className="paper" disabled={isSubmitted}>
-          <RestartAltIcon />
+          <RestartAltIcon className='text'/>
           </button>
           </div>
         </Container>
         </SectionCard>
         </Stack>
         <Instructions text={content.test1.reading.part5.instructions} />
-        <p style={{fontSize:"0.75em"}}>{content.scoreValue[0.5]}</p>
+        <p className='text' style={{fontSize:"0.75em"}}>{content.scoreValue[0.5]}</p>
 
       <SectionCard>
       <Container >
@@ -201,7 +201,7 @@ for (let i=0; i < 8; i++){
         </SectionCard>
         <div style={{display:"flex", justifyContent: "center", alignItems: "center"}}>
   {!isSubmitted && (
-    <Button variant="contained" onClick={handleSubmit} sx={{backgroundColor:green[500], textAlign:"center", fontWeight: "bold", m:3}}>Oblicz wynik</Button> 
+    <Button variant="contained"color='success' onClick={handleSubmit} sx={{backgroundColor:green[700], textAlign:"center", m:3,  fontWeight:"bold"}}>Oblicz wynik</Button> 
   )}
   {isSubmitted && (<h3>{points}/30</h3>)}
 </div>

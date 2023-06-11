@@ -14,6 +14,8 @@ export default function Blank({ id, answer, submitted, example, reset, half = fa
   const [inputValue, setInputValue] = useState(''); // Track the input field value
   const [isReset, setIsReset] = useState(false);
   const slotRef = useRef(null);
+  const className = id == "0" ? "green-text" : "";
+
 
   const getTextContent = () => {
     if (slotRef.current) {
@@ -80,6 +82,7 @@ export default function Blank({ id, answer, submitted, example, reset, half = fa
         <button
           onClick={handleClick}
           style={{
+            marginLeft:'2px',
             marginRight: '2px',
             border: 'none',
             borderRadius: '5px',
@@ -88,7 +91,7 @@ export default function Blank({ id, answer, submitted, example, reset, half = fa
           disabled={id === '0' || submitted} // Disable paste button during reset
           className='paper'
         >
-          <ContentPasteGoIcon sx={{ fontSize: '0.75em' }} />
+          <ContentPasteGoIcon className='text' sx={{ fontSize: '0.75em' }} />
         </button>
         {!submitted ? (
           <div
@@ -97,8 +100,9 @@ export default function Blank({ id, answer, submitted, example, reset, half = fa
             onPaste={handlePaste}
             className='border-paper'
             ref={slotRef}
-          >
+          >   <span className={className}>
             {example}
+            </span>
             {inputValue}
           </div>
         ) : (
@@ -108,7 +112,9 @@ export default function Blank({ id, answer, submitted, example, reset, half = fa
             ref={slotRef}
             className="border-grey"
           >
+            <span className={className}>
             {getTextContent()}
+            </span>
           </div>
         )}
         {result}
