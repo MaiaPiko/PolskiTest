@@ -5,6 +5,14 @@
   --green: #388e3c;
 }
 
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--background);
+}
+
+
+
 .green-text{
   /* color:var(--green) !important; */
   color: var(--text-color);
