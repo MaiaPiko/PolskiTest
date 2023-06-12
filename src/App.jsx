@@ -29,7 +29,7 @@ function App() {
           <Route path="/test/1" element={<ReadingTest1 />} />
           <Route path="/test/2" element={<ReadingTest2/>} />
 
-          <Route path="*" element={<Home />} />
+          <Route path="/*" element={<Home />} />
       
         </Route>
       </Routes>
