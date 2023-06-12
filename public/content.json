@@ -175,8 +175,8 @@
                   "text":"0. W Polsce wszystkie supermarkety są zamknięte trzy niedziele w miesiącu. Czynne są tylko sklepy, w których sprzedaje właściciel, a także apteki, stacje paliw oraz punkty gastronomiczne czy usługowe, jak restauracje, kina czy poczta.",
                   "question":"0. Z tego tekstu wynika, że w każdą niedzielę",
                   "choices":{
-                    "a":"można pójść do restauracji",
-                    "b":"czynne są niektóre supermarkety",
+                    "a":"można pójść do restauracji.",
+                    "b":"czynne są niektóre supermarkety.",
                     "c":"muszą pracować właściciele sklepów."
                   },
                   "answer":"a"
@@ -187,7 +187,7 @@
                   "choices":{
                     "a":" każdy, kto chce otworzyć własną firmę.",
                     "b":" bezrobotny powyżej 30. roku życia.",
-                    "c":" bezrobotny powyżej 30. roku życia."
+                    "c":"  każda osoba bez wykształcenia."
                   },
                   "answer":"b"
                 },
@@ -265,7 +265,7 @@
                   "instructions":"III. Proszę - zgodnie z podanym przykładem - wypełnić puste miejsca. Możesz użyć funkcji kopiowania i wklejania, po prostu kliknij frazę w polu tekstowym, aby skopiować, a następnie kliknij przycisk obok każdego pustego miejsca do wklejenia.",
                   "title":"",
                   "choices":{
-                  "A":"A którzy bawili gości",
+                  "A":"którzy bawili gości",
                   "B":"bo pierwszy raz odbył się w 1260 roku",
                   "C":"a jednocześnie jedna z największych w Europie",
                   "D":"bo tutaj każdy znajduje coś dla siebie",
@@ -332,7 +332,7 @@
               "6":"książkę",
               "7":"młodzieży",
               "8":"wolność",
-              "9":" przyłączyło się",
+              "9":"przyłączyło się",
               "10":"popularne"
 
             }

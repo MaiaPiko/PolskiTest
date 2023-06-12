@@ -25,7 +25,7 @@ dołączyć nowe elementy do przygotowywanego koncertu .
 festiwalu będzie można nie tylko słuchać muzyki. Przygotowujemy
 również <DropMenu choice1={"wystawę"} choice2={"przedstawienie"} choice3={"spektakl"} id={"6"} answer={"wystawę"} submitted={submitted}/>
  obrazów Marka Grechuty. Natomiast fotograf
-– Adam Bujak pokaże publicznie po raz pierwszy swoje archiwalne (zdjęcia, płyty, rysunki)7
+– Adam Bujak pokaże publicznie po raz pierwszy swoje archiwalne <DropMenu choice1={"zdjęcia"} choice2={"płyty"} choice3={"rysunki"} id={"7"} answer={"zdjęcia"} submitted={submitted}/>
 ,
 które robił Markowi Grechucie.
         </p>

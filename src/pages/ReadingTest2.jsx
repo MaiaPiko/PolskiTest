@@ -94,7 +94,7 @@ export default function ReadingTest2(){
         <Container key={i} maxWidth="sm" sx={{ px: 0 }}>
         <Stack  sx={{m:2}} >
           <TextCard text={content.test2.reading.part2[i].question}/>
-          <TrueOrFlase submitted={isSubmitted2} answer={content.test1.reading.part2[i].answer} id={i}/>
+          <TrueOrFlase submitted={isSubmitted2} answer={content.test2.reading.part2[i].answer} id={i}/>
         </Stack>
           </Container>
           );   
@@ -140,9 +140,11 @@ export default function ReadingTest2(){
 
       <SectionCard>
       <Stack sx={{alignContent:"center"}}>
-      <WordBox textArray={Object.values(content.test2.reading.part3.choices)} isReset={isReset} submitted={isSubmitted2}/>
- 
       <Container maxWidth="md">
+      <WordBox textArray={Object.values(content.test2.reading.part3.choices)} isReset={isReset} submitted={isSubmitted2}
+      example={content.test2.reading.part3.choices["B"]}/>
+ 
+   
       <p  style={{textAlign:"center", fontWeight:500}}>{content.test2.reading.part3.title}</p>
 
         <div style={{fontSize:"1em", padding:"1em"}}>   
@@ -166,7 +168,7 @@ export default function ReadingTest2(){
         <Container>
         <WordBox textArray={Object.values(content.test2.reading.part4.choices)} isReset={isReset2} submitted={isSubmitted2} 
         example={content.test2.reading.part4.choices[0]}/>
-        <p style={{textAlign:"center", fontWeight:500}}>{content.test1.reading.part4.title}</p>
+        <p style={{textAlign:"center", fontWeight:500}}>{content.test2.reading.part4.title}</p>
 
         <ExerciseTable rows={rows}/>
         <div style={{textAlign:"right", padding:"5px"}}>
@@ -183,9 +185,9 @@ export default function ReadingTest2(){
         <SectionCard>
         <Stack sx={{alignContent:"center"}}>
        
-       
-        <WordBox style={{paddingRight:"2px"}} textArray={Object.values(content.test2.reading.part5.choices)} isReset={isReset3} submitted={isSubmitted2} example={content.test2.reading.part5.choices[0]}/>
         <Container maxWidth="md">
+        <WordBox style={{paddingRight:"2px"}} textArray={Object.values(content.test2.reading.part5.choices)} isReset={isReset3} submitted={isSubmitted2} example={content.test2.reading.part5.choices[0]}/>
+        
         <div style={{fontSize:"1em", padding:"1em"}}>   
 
         <Test2Part5 isReset={isReset3} isSubmitted={isSubmitted2}/>
