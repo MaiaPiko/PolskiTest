@@ -14,7 +14,7 @@ export default function Blank({ id, answer, submitted, example, reset, half = fa
   const [inputValue, setInputValue] = useState(''); // Track the input field value
   const [isReset, setIsReset] = useState(false);
   const slotRef = useRef(null);
-  const className = id == "0" ? "green-text" : "";
+  
 
 
   const getTextContent = () => {
@@ -100,9 +100,9 @@ export default function Blank({ id, answer, submitted, example, reset, half = fa
             onPaste={handlePaste}
             className='border-paper'
             ref={slotRef}
-          >   <span className={className}>
+          >   
             {example}
-            </span>
+          
             {inputValue}
           </div>
         ) : (
@@ -112,9 +112,9 @@ export default function Blank({ id, answer, submitted, example, reset, half = fa
             ref={slotRef}
             className="border-grey"
           >
-            <span className={className}>
+  
             {getTextContent()}
-            </span>
+
           </div>
         )}
         {result}

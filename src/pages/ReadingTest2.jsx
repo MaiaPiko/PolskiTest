@@ -19,15 +19,23 @@ import RestartAltIcon from '@mui/icons-material/RestartAlt';
 import ExerciseRow from '../components/Grid/ExerciseRow';
 import ExerciseTable from '../components/Grid/ExerciseTable';
 import Test2Part5 from '../components/FillinTheBlanks/Test2Part5';
+import { restart } from "../features/score/scoreSlice";
 
 
 export default function ReadingTest2(){
     const dispatch = useDispatch();
-    const [isSubmitted, setIsSubmitted] = useState(false);
+    const [isSubmitted2, setIsSubmitted2] = useState(false);
     const points = useSelector((state) => state.point.points);
     const [isReset, setIsReset] = useState(false);
     const [isReset2, setIsReset2] = useState(false);
     const [isReset3, setIsReset3] =useState(false)
+
+
+    useEffect(() => {
+      dispatch(restart());
+    }, [dispatch]);
+
+
 
   const handleReset = () => {
     // setIsReset((prevState) => !prevState );
@@ -36,6 +44,8 @@ export default function ReadingTest2(){
       setIsReset(false);
     }, 2000); 
   };
+
+
 
 
 
@@ -57,7 +67,7 @@ export default function ReadingTest2(){
   };
 
     const handleSubmit = () => {
-        setIsSubmitted(true);    
+        setIsSubmitted2(true);    
       };
     
 
@@ -72,7 +82,7 @@ export default function ReadingTest2(){
               choiceB={content.test2.reading.part1[i].choices.b}
               choiceC={content.test2.reading.part1[i].choices.c}
               answer={content.test2.reading.part1[i].answer}
-              submitted={isSubmitted}
+              submitted={isSubmitted2}
             />
           </Stack>
         </Container>
@@ -84,16 +94,16 @@ export default function ReadingTest2(){
         <Container key={i} maxWidth="sm" sx={{ px: 0 }}>
         <Stack  sx={{m:2}} >
           <TextCard text={content.test2.reading.part2[i].question}/>
-          <TrueOrFlase submitted={isSubmitted} answer={content.test1.reading.part2[i].answer} id={i}/>
+          <TrueOrFlase submitted={isSubmitted2} answer={content.test1.reading.part2[i].answer} id={i}/>
         </Stack>
           </Container>
           );   
       }
 
-      const rows = [<ExerciseRow id={"0"}  example={content.test2.reading.part4.choices[0]} submitted={isSubmitted} sentence={content.test2.reading.part4.sentences[0]}/>]
+      const rows = [<ExerciseRow id={"0"}  example={content.test2.reading.part4.choices[0]} submitted={isSubmitted2} sentence={content.test2.reading.part4.sentences[0]}/>]
   for (let i=1; i < 7; i++){
     rows.push(
-    <ExerciseRow id={i} submitted={isSubmitted}  reset={isReset2} answer={content.test2.reading.part4.choices[content.test2.reading.part4.answers[i]]} sentence={content.test2.reading.part4.sentences[i]}/>)}
+    <ExerciseRow id={i} submitted={isSubmitted2}  reset={isReset2} answer={content.test2.reading.part4.choices[content.test2.reading.part4.answers[i]]} sentence={content.test2.reading.part4.sentences[i]}/>)}
 
 
 
@@ -130,16 +140,16 @@ export default function ReadingTest2(){
 
       <SectionCard>
       <Stack sx={{alignContent:"center"}}>
-      <WordBox textArray={Object.values(content.test2.reading.part3.choices)} isReset={isReset} submitted={isSubmitted}/>
+      <WordBox textArray={Object.values(content.test2.reading.part3.choices)} isReset={isReset} submitted={isSubmitted2}/>
  
       <Container maxWidth="md">
       <p  style={{textAlign:"center", fontWeight:500}}>{content.test2.reading.part3.title}</p>
 
         <div style={{fontSize:"1em", padding:"1em"}}>   
-          <Test2Part3 isSubmitted={isSubmitted} isReset={isReset}/>
+          <Test2Part3 isSubmitted={isSubmitted2} isReset={isReset}/>
           <div style={{textAlign:"right"}}>
           <button onClick={handleReset} style={{border:"none", borderRadius: '5px',
-            boxShadow: '0px 3px 15px rgba(0,0,0,0.2)',}} className="paper" disabled={isSubmitted}>
+            boxShadow: '0px 3px 15px rgba(0,0,0,0.2)',}} className="paper" disabled={isSubmitted2}>
           <RestartAltIcon className='text' />
           </button>
           </div>
@@ -154,14 +164,14 @@ export default function ReadingTest2(){
          <Stack sx={{alignContent:"center"}}>
         <SectionCard>
         <Container>
-        <WordBox textArray={Object.values(content.test2.reading.part4.choices)} isReset={isReset2} submitted={isSubmitted} 
+        <WordBox textArray={Object.values(content.test2.reading.part4.choices)} isReset={isReset2} submitted={isSubmitted2} 
         example={content.test2.reading.part4.choices[0]}/>
         <p style={{textAlign:"center", fontWeight:500}}>{content.test1.reading.part4.title}</p>
 
         <ExerciseTable rows={rows}/>
         <div style={{textAlign:"right", padding:"5px"}}>
         <button onClick={handleReset2} style={{border:"none", borderRadius: '5px',
-            boxShadow: '0px 3px 15px rgba(0,0,0,0.2)',}} className="paper" disabled={isSubmitted}>
+            boxShadow: '0px 3px 15px rgba(0,0,0,0.2)',}} className="paper" disabled={isSubmitted2}>
           <RestartAltIcon className='text'/>
           </button>
           </div>
@@ -174,15 +184,15 @@ export default function ReadingTest2(){
         <Stack sx={{alignContent:"center"}}>
        
        
-        <WordBox style={{paddingRight:"2px"}} textArray={Object.values(content.test2.reading.part5.choices)} isReset={isReset3} submitted={isSubmitted} example={content.test2.reading.part5.choices[0]}/>
+        <WordBox style={{paddingRight:"2px"}} textArray={Object.values(content.test2.reading.part5.choices)} isReset={isReset3} submitted={isSubmitted2} example={content.test2.reading.part5.choices[0]}/>
         <Container maxWidth="md">
         <div style={{fontSize:"1em", padding:"1em"}}>   
 
-        <Test2Part5 isReset={isReset3} isSubmitted={isSubmitted}/>
+        <Test2Part5 isReset={isReset3} isSubmitted={isSubmitted2}/>
         
         <div style={{textAlign:"right"}}>
           <button onClick={handleReset3} style={{border:"none", borderRadius: '5px',
-            boxShadow: '0px 3px 15px rgba(0,0,0,0.2)',}} className="paper" disabled={isSubmitted}>
+            boxShadow: '0px 3px 15px rgba(0,0,0,0.2)',}} className="paper" disabled={isSubmitted2}>
           <RestartAltIcon className='text'/>
           </button>
           </div>
@@ -195,10 +205,10 @@ export default function ReadingTest2(){
 
 
         <div style={{display:"flex", justifyContent: "center", alignItems: "center"}}>
-  {!isSubmitted && (
-    <Button color="success" variant="contained" onClick={handleSubmit} sx={{backgroundColor:green[500], textAlign:"center", fontWeight: "bold", m:3}}>Oblicz wynik</Button> 
+  {!isSubmitted2 && (
+    <Button color="success" variant="contained" onClick={handleSubmit} sx={{backgroundColor:green[500], textAlign:"center", m:3}}>Oblicz wynik</Button> 
   )}
-  {isSubmitted && (<h3>{points}/30</h3>)}
+  {isSubmitted2 && (<h3 className='text'>{points}/30</h3>)}
 </div>
 
 

@@ -23,7 +23,9 @@ const CopyButton = ({ text, isReset, example, submitted }) => {
   };
 
   const buttonStyle = {
-    textDecoration: isClicked || isExample(text, example) ? "line-through" : "none"
+    textDecoration: isClicked || isExample(text, example) ? "line-through" : "none",
+
+    
   };
 
 

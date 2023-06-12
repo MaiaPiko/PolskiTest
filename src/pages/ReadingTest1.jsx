@@ -8,7 +8,7 @@ import TextCard from "../components/TextCard";
 import MultipleChoice from "../components/MultipleChoice";
 import { Button } from "@mui/material";
 import { useSelector, useDispatch } from 'react-redux';
-import { addPoint, noPoint } from "../features/score/scoreSlice";
+import { restart } from "../features/score/scoreSlice";
 import Timer from "../components/Timer";
 import Stack from '@mui/material/Stack';
 import SectionCard from "../components/SectionCard";
@@ -33,6 +33,12 @@ function ReadingTest1() {
   const [isReset, setIsReset] = useState(false);
   const [isReset2, setIsReset2] = useState(false);
   const [inputValues, setInputValues] = useState({});
+
+
+
+  useEffect(() => {
+    dispatch(restart());
+  }, [dispatch]);
 
   const handleInputChange = (id, value) => {
     setInputValues((prevInputValues) => ({
@@ -201,9 +207,9 @@ for (let i=0; i < 8; i++){
         </SectionCard>
         <div style={{display:"flex", justifyContent: "center", alignItems: "center"}}>
   {!isSubmitted && (
-    <Button variant="contained"color='success' onClick={handleSubmit} sx={{backgroundColor:green[700], textAlign:"center", m:3,  fontWeight:"bold"}}>Oblicz wynik</Button> 
+    <Button variant="contained"color='success' onClick={handleSubmit} sx={{backgroundColor:green[700], textAlign:"center", m:3,  }}>Oblicz wynik</Button> 
   )}
-  {isSubmitted && (<h3>{points}/30</h3>)}
+  {isSubmitted && (<h3 className='text'>{points}/30</h3>)}
 </div>
 
 

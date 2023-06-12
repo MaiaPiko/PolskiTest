@@ -16,10 +16,13 @@ const initialState = {
       },
       addHalfPoint:(state, action) =>{
         state.points += 0.5;
+      }, 
+      restart:(state, action) =>{
+        state.points = 0;
       }
     },
   });
 
-  export const { addPoint, noPoint, addHalfPoint } = scoreSlice.actions;
+  export const { addPoint, noPoint, addHalfPoint, restart } = scoreSlice.actions;
 
 export default scoreSlice.reducer;
