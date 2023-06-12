@@ -24,7 +24,7 @@
             "question": "1. Ten tekst informuje, że:",
             "choices": {
               "a": " kioski internetowe są popularne w całym kraju.",
-              "b": " w kiosku z gazetami można skorzystać z Internetu",
+              "b": " w kiosku z gazetami można skorzystać z Internetu.",
               "c": " kioski internetowe oferują dostęp do Internetu.",
               "answer":"c"
             }
