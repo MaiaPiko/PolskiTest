@@ -57,7 +57,7 @@ export default function TrueOrFlase({
         </RadioGroup>
       </FormControl>
       {submitted && id!="0" && (
-        <Box mt={2}>
+        <Box ml={3}>
           {selectedValue === answer ? (
             <>
             <CheckMark />

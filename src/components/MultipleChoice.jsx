@@ -55,22 +55,21 @@ export default function MultipleChoice({
           name="choices"
           value={id===0? answer: selectedValue}
           onChange={handleChange}
-          sx={{ ":disabled": { submitted: true || id=="0"}, '&.Mui-checked': {
+          sx={{p:1, ":disabled": { submitted: true || id=="0"}, '&.Mui-checked': {
             color: 'green',
             backgroundColor:'green'
           }, }}
           disabled = {id==="0"}
           className={className}
-       
+          
 
           >
-          <FormControlLabel value="a" control={<Radio />} label={choiceA} disabled={submitted || id=="0"} sx={{  "& .Mui-checked": {color:green[700]}}}/>
-          <FormControlLabel value="b" control={<Radio />} label={choiceB} disabled={submitted || id=="0"} sx={{  "& .Mui-checked": {color: green[700]}}}/>
-          <FormControlLabel value="c" control={<Radio />} label={choiceC} disabled={submitted || id=="0"} sx={{  "& .Mui-checked": {color: green[700]}}}/>
+          <FormControlLabel value="a" control={<Radio />} label={choiceA} disabled={submitted || id=="0"} sx={{  "& .Mui-checked": {color:green[700]}, pb:1}}/>
+          <FormControlLabel value="b" control={<Radio />} label={choiceB} disabled={submitted || id=="0"} sx={{  "& .Mui-checked": {color: green[700]},  pb:1}}/>
+          <FormControlLabel value="c" control={<Radio />} label={choiceC} disabled={submitted || id=="0"} sx={{  "& .Mui-checked": {color: green[700]}, pb:0}}/>
         </RadioGroup>
-      </FormControl>
-      {submitted && !id=="0" &&(
-        <Box mt={2}>
+        {submitted && !id=="0" &&(
+        <Box sx={{ml:2}}>
           {selectedValue === answer ? (
             <CheckMark/>
           ) : (
@@ -78,6 +77,8 @@ export default function MultipleChoice({
           )}
         </Box>
       )}
+      </FormControl>
+  
   
     </>
   );
