@@ -49,7 +49,7 @@ export default function MultipleChoice({
   return (
     <>
       <FormControl component="fieldset" sx={{px:3}}>
-        <FormLabel sx={{ "&.Mui-focused": { color: green[700] } }}>{question}</FormLabel>
+        <FormLabel sx={{ "&.Mui-focused": { color: green[700] }, pb:1 }}>{question}</FormLabel>
         <RadioGroup
           aria-label="choices"
           name="choices"
@@ -64,15 +64,15 @@ export default function MultipleChoice({
        
 
           >
-          <FormControlLabel value="a" control={<Radio />} label={choiceA} disabled={submitted || id=="0"} sx={{"& .Mui-checked": {color:green[700]}, p:1}}/>
-          <FormControlLabel value="b" control={<Radio />} label={choiceB} disabled={submitted || id=="0"} sx={{"& .Mui-checked": {color: green[700]}, p:1}}/>
-          <FormControlLabel value="c" control={<Radio />} label={choiceC} disabled={submitted || id=="0"} sx={{"& .Mui-checked": {color: green[700]}, p:1}}/>
+          <FormControlLabel value="a" control={<Radio />} label={choiceA} disabled={submitted || id=="0"} sx={{"& .Mui-checked": {color:green[700]}, paddingBottom:1}}/>
+          <FormControlLabel value="b" control={<Radio />} label={choiceB} disabled={submitted || id=="0"} sx={{"& .Mui-checked": {color: green[700]}, paddingBottom:1}}/>
+          <FormControlLabel value="c" control={<Radio />} label={choiceC} disabled={submitted || id=="0"} sx={{"& .Mui-checked": {color: green[700]}, paddingBottom:1}}/>
         </RadioGroup>
       </FormControl>
       {submitted && !id=="0" &&(
-        <Box mt={2}>
+        <Box ml={2} sx={{pl:4}}>
           {selectedValue === answer ? (
-            <CheckMark/>
+            <CheckMark />
           ) : (
             <CrossMark/>
           )}
