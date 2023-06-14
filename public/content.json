@@ -291,12 +291,12 @@
               "title":"Jak polubić sprzątanie?",
               "choices":{
                 "0":"Pozytywne myślenie ma znaczenie",
-                "1":"Ważny jest cel ",
+                "1":"Ważny jest cel",
                 "2":"Odpowiedni czas",
                 "3":"Najpierw to, co dla ciebie ważne",
-                "4":"Małe kroki ",
+                "4":"Małe kroki",
                 "5":"Dobry sprzęt i środki czystości",
-                "6":"Wykorzystaj czas "
+                "6":"Wykorzystaj czas"
             },
             "sentences":{
               "0":"To klucz do tego, by polubić porządki. Możemy powtarzać, że znów trzeba sprzątać albo chcieć to zrobić i z przyjemnością myśleć o końcowym efekcie.",
@@ -320,7 +320,7 @@
             }
 
           },
-          "part5":{
+            "part5":{
             "instructions":"V. Proszę – zgodnie z przykładem – uzupełnić tekst wyrazami z ramki.",
             "choices":{
               "0":"częścią",
@@ -338,8 +338,169 @@
             }
           }
         }
+      },
+      "test3": {
+        "reading": {
+          "title": "Rozumienie tekstów pisanych&nbsp;3",
+          "description": "Poniżej cała sekcja Rozumienie tekstów pisanych z <a href='https://certyfikatpolski.pl/wp-content/uploads/2020/12/B1_przykladowy_test_2020_03.pdf'>przykładowego testu</a> (rozumenie tekstów pisanych) <a href='https://certyfikatpolski.pl/'>certyfikatpolski.pl</a> z 2020 roku. Wszystkie pytania i ćwiczenia zostały przekształcone w ćwiczenia interaktywne. Możesz się sprawdzić, uruchamiając poniższy stoper i przechodząc przez pytania. Po zakończeniu możesz zobaczyć swój wynik.<br>",
+          "minutes_to_complete": 45,
+          "part1": {
+            "instructions": "I. Proszę przeczytać akapity i zaznaczyć właściwe odpowiedzi zgodnie z podanym przykładem.",
+            "0": {
+              "text": "0. W popularnym programie telewizyjnym zapytano jednego z uczestników o nazwisko filozofa, który opublikował swoje poglądy na wszystko. Prawidłowa odpowiedź brzmiała, że jest to Leszek Kołakowski. Pytany natomiast odpowiedział, że był to Lech Wałęsa.",
+              "question": "0. Z tego tekstu wynika, że uczestnik programu na pytanie",
+              "choices": {
+                "a": "udzielił dobrej odpowiedzi.",
+                "b": "udzielił złej odpowiedzi.",
+                "c": "nie udzielił odpowiedzi."
+              },
+              "answer": "b"
+            },
+            "1": {
+              "text": "1. Pomysł wprowadzenia opłat za wjazd do Wenecji pojawił się już dawno. Od tego roku turyści – w zależności od terminu będą musieli zapłacić od 3 do 10 euro. Władze Wenecji planują zniżki dla osób, które przyjadą na imprezy organizowane przez miasto.",
+              "question": "1. Z tego tekstu wynika, że opłata za wjazd do Wenecji",
+              "choices": {
+                "a": "nie będzie taka sama przez cały rok.",
+                "b": "obowiązuje już od dawna.",
+                "c": "będzie wyższa dla uczestników imprez miejskich."
+              },
+              "answer": "a"
+            },
+            "2": {
+              "text": "2. Konkurs teatralny „Więcej niż teatr!” jest zmienioną wersją zeszłorocznego przeglądu teatrów amatorskich. W spektaklach występują aktorzy z całej Polski, zarówno amatorzy, jak i profesjonaliści. W tym roku obejrzymy 10 przedstawień na podstawie znanych tekstów literackich.",
+              "question": "2. Z tego tekstu wynika, że",
+              "choices": {
+                "a": "konkurs teatralny od lat istnieje w takiej samej formie.",
+                "b": "w spektaklach mogą wziąć udział zawodowi aktorzy.",
+                "c": "aktorzy będą prezentować znane wiersze."
+              },
+              "answer": "b"
+            },
+            "3": {
+              "text": "3. Znany dom mody zaprezentował swoje nowe logo, przygotowane na potrzeby kampanii reklamującej modę męską na sezon jesień/zima 2020. Nowy znak wygląda, jakby był pisany przez dziecko, co – według niektórych – ma się łączyć z pozytywnymi emocjami.",
+              "question": "3. Z tego tekstu wynika, że nowy znak reklamowy",
+              "choices": {
+                "a": "był inspirowany jesienną modą.",
+                "b": "stworzyły dzieci.",
+                "c": "ma przywoływać dobry nastrój."
+              },
+              "answer": "c"
+            },
+            "4": {
+              "text": "4. 6 na 10 rodziców w Europie mówi, że ma problemy ze skoncentrowaniem się na drodze w czasie, gdy ich dzieci źle zachowują się w samochodzie. Jeszcze bardziej może martwić sytuacja, że prawie co trzeci dorosły zauważa, że niegrzeczne dzieci w aucie mają negatywny wpływ na bezpieczeństwo jazdy.",
+              "question": "4. Ten tekst informuje, że",
+              "choices": {
+                "a": "złe zachowanie dzieci w samochodzie powoduje brak uwagi u kierowcy.",
+                "b": "co trzeci kierowca ma problem z koncentracją na drodze.",
+                "c": "kierowcy, którzy są rodzicami, nie potrafią ostrożnie jeździć."
+              },
+              "answer": "a"
+            },
+            "5": {
+              "text": "5. W tym roku bardzo dużo osób chciało wziąć udział w maratonie organizowanym w Łodzi 6 stycznia. Lista startowa Biegu Trzech Króli była zamknięta już 2 stycznia. Kilku zapisanych zawodników się nie pojawiło, więc nieliczne osoby mogły dołączyć do wyścigu w ostatniej chwili.",
+              "question": "5. Z tego tekstu wynika, że",
+              "choices": {
+                "a": "w maratonie biegło mało zawodników.",
+                "b": "lista zapisów była otwarta do 6 stycznia.",
+                "c": "były osoby, które zrezygnowały z biegu."
+              },
+              "answer": "c"
+            }
+          },
+          "part2": {
+            "instructions":"II. Proszę przeczytać tekst, a następnie zaznaczyć: P – gdy zdanie jest prawdziwe, F – gdy jest fałszywe.",
+            "title":"Świat według Kiepskich",
+            "text":"<p>„Świat według Kiepskich” to serial komediowy, który od ponad 20 lat jest pokazywany w polskiej telewizji. Pierwszy odcinek miał premierę w 1999 roku i obejrzało go 6,5 mln widzów. Był to duży sukces, dlatego powstały kolejne odcinki „Kiepskich”, bo tak serial nazywany jest przez wielu Polaków. Do dzisiaj można zobaczyć ponad 560 odcinków – jest to jeden z najdłużej emitowanych seriali komediowych w Polsce.</p><p>Serial pokazuje codzienne życie zwykłych ludzi, wykorzystuje prosty humor i zabawny język – prawdopodobnie dlatego cieszy się tak dużą popularnością wśród Polaków. Głównym bohaterem jest Ferdynand Kiepski, który nie może znaleźć pracy, bo nie ma wykształcenia. Halina, czyli żona Ferdynanda, jest pielęgniarką w szpitalu, natomiast sąsiad sprzedaje bieliznę na pobliskim targu.</p><p>Początkowo „Świat według Kiepskich” był nagrywany w jednej z kamienic, jednak ciągłe chodzenie aktorów, reżyserów i operatorów po schodach przeszkadzało mieszkańcom i postanowiono przenieść nagrania do studia. Miejsce jest nowe, ale pewne rekwizyty są obecne w serialu od początku, na przykład różowy szlafrok Haliny można zobaczyć zarówno w pierwszych odcinkach, jak i w ostatnich.</p><p>Serial ciągle się zmienia. Niektórzy bohaterowie odchodzą, a w ich miejsce pojawiają się inne postacie. Najnowsze odcinki można oglądać już nie tylko w telewizji, ale także w internecie.</p>",
+            "0":{
+              "question":"0. „Świat według Kiepskich” jest serialem komediowym.",
+              "answer":"p"
+            },
+            "1":{
+              "question":"1. Pierwszy odcinek serialu był nieudany.",
+              "answer":"f"
+            },
+            "2":{
+              "question":"2. Nagrywanie kolejnych odcinków zależało od zainteresowania widzów.",
+              "answer":"p"
+            },
+            "3":{
+              "question":"3. Bohaterowie serialu należą do najbogatszych ludzi w Polsce.",
+              "answer":"f"
+            },
+            "4":{
+              "question":"4. Sąsiad Ferdynanda zajmuje się handlem.",
+              "answer":"p"
+            },
+            "5":{
+              "question":"5. Serial od początku jest nagrywany w studiu filmowym.",
+              "answer":"f"
+            },
+            "6":{
+              "question":"6. Niektóre przedmioty można zobaczyć w serialu od pierwszych odcinków aż do dziś.",
+              "answer":"p"
+            },
+            "7":{
+              "question":"7. Cały serial jest dostępny w telewizji i w internecie.",
+              "answer":"f"
+            }
+          },
+          "part3": {
+            "instructions": "III. Proszę - zgodnie z podanym przykładem - wypełnić puste miejsca. Możesz użyć funkcji kopiowania i wklejania, po prostu kliknij frazę w polu tekstowym, aby skopiować, a następnie kliknij przycisk obok każdego pustego miejsca do wklejenia.",
+            "title": "",
+            "choices": {
+              "A": "natomiast teraz także w telewizji",
+              "B": "ale powoli stają się pracą i źródłem dochodów",
+              "C": "aby zagrać w piłkę nożną",
+              "D": "a nawet z mieszkańcami innych kontynentów",
+              "E": "w tym także w Polsce",
+              "F": "którzy interesują się e-sportem",
+              "G": "że oglądają je ludzie z całego świata",
+              "H": "w której uczą się przyszli zawodnicy"
+            },
+            "answers":{
+              "1": "D",
+              "2": "B",
+              "3": "E",
+              "4": "G",
+              "5": "A",
+              "6": "H",
+              "7": "F"
+            }
+            
+          },
+          "part4":{
+            "instructions":"IV. Proszę - zgodnie z podanym przykładem - wypełnić puste miejsca. Możesz użyć funkcji kopiowania i wklejania, po prostu kliknij frazę w polu tekstowym, aby skopiować, a następnie kliknij przycisk obok każdego pustego miejsca do wklejenia.",
+            "title":"W Polsce ciągle coś się dzieje!",
+            "choices":{
+              "0":"Pierwszy raz w Polsce",
+              "1":"Kary dla kierowców",
+              "2":"Choroby w okresie zimowym",
+              "3":"Za pół ceny",
+              "4":"Opłaty w górę",
+              "5":"Praca w straży miejskiej",
+              "6":"Zakupy coraz droższe",
+              "7":"Nowe zasady segregacji."
+          },
+          "sentences":{
+            "0":"Artysta jeszcze nigdy nie koncertował w naszym kraju. Inspiracją dla niego są rockowe i popowe przeboje.",
+            "1":"Straż miejska wypisuje mandaty wszystkim zmotoryzowanym, którzy nie przestrzegają nowych zasad organizacji ruchu drogowego.",
+            "2":"Palenie w domowych piecach to jedna z przyczyn powstawania smogu, dlatego zimą częściej pojawiają się infekcje gardła, kaszel, astma.",
+            "3":"Restauracja „Nowa” ogłosiła zimową promocję. W niedziele (od grudnia do końca lutego) będzie można kupić niektóre dania o 50% taniej.",
+            "4":"Od nowego roku ceny za wywiezienie śmieci będą wyższe, a w centrach nie będzie już koszy tylko jednego rodzaju. Tych, którzy nie będą segregować, czekają kary.",
+            "5":"Trzeba mieć ukończone 21 lat i średnie wykształcenie. Zarobki powinny być wysokie, szczególnie dla tych, którzy zdadzą dobrze egzaminy.",
+            "6":"W ostatnich latach więcej płacimy za mięso, masło, jajka i czekoladę. Wzrost cen z roku na rok staje się bardziej odczuwalny.",
+            "7":"Od 1 kwietnia będziemy musieli dzielić śmieci na więcej grup niż do tej pory. W niektórych miastach nowością będą obowiązkowe brązowe kosze na odpady BIO."
+          }
+        },
+        "part5":{
+          "instructions":"V. Proszę wybrać najlepszą z trzech opcji zgodnie z przykładem."
+        } 
+
+
+        }
       }
-              }
+    }
+    
         
   
   

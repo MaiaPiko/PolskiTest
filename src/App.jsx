@@ -13,7 +13,7 @@ import "@fontsource/poppins/500.css";
 import About from './pages/About'; 
 import "@fontsource/poppins/400-italic.css"; // Specify weight and style
 import ReadingTest2 from './pages/ReadingTest2';
-
+import ReadingTest3 from "./pages/ReadingTest3";
 
 function App() {
   // window.addEventListener('beforeunload', sessionStorage.clear());
@@ -28,7 +28,7 @@ function App() {
           <Route index element={<Home/>} />
           <Route path="/test/1" element={<ReadingTest1 />} />
           <Route path="/test/2" element={<ReadingTest2/>} />
-
+          <Route path="/test/3" element={<ReadingTest3/>} />
           <Route path="*" element={<Home />} />
       
         </Route>
