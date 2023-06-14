@@ -40,7 +40,8 @@ function Home() {
        
           <Button variant="contained" color="success" component={Link} to="/test/1"  sx={{ p: 5, mr: 0.5,  width:"60%", backgroundColor:green[400] }}> Test 1 <br/> </Button>
           <Button variant="contained" color="success" component={Link} to="/test/2"  sx={{ p: 5, ml:0.5 , width:"60%", backgroundColor:green[400]}}> Test 2</Button>
-          
+          <Button variant="contained" color="success" component={Link} to="/test/3"  sx={{ p: 5, ml:0.5 , width:"60%", backgroundColor:green[400]}}> Test 3</Button>
+
         {/* </div> */}
         </div>
         <p className="text" style={{textAlign:"center",  padding:"0", margintop:1, marginButton:"0em"}}>Ćwicz swoje umiejętności gramatyczne:</p>
