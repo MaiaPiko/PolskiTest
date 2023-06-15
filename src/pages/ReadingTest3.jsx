@@ -121,7 +121,7 @@ return(
     <Container maxWidth="md" sx={{alignContent:"center"}}>
               <h2 style={{textAlign:"center"}} className='text'>{parse(content.test3.reading.title)} </h2>
               <p className='text' style={{textAlign:"justify"}}>{parse(content.test3.reading.description)}</p>
-              <Timer minutes={45}/>
+              <Timer minutes={40}/>
               <Instructions text={content.test3.reading.part1.instructions} />
               <p className='text' style={{fontSize:"0.75em"}}>{content.scoreValue[1]}</p>
               <SectionCard>
