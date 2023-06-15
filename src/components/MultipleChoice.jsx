@@ -29,10 +29,11 @@ export default function MultipleChoice({
   const points = useSelector((state) => state.point.points);
   const radioColor = green[700];
   const className = id == "0" ? "green-text" : "";
+  const isCorrect = selectedValue === answer;
 
   useEffect(() => {
     if (submitted && !id=="0") {
-      const isCorrect = selectedValue === answer;
+ 
       if (isCorrect) {
         dispatch(addPoint());
       } else {
@@ -45,6 +46,7 @@ export default function MultipleChoice({
     setSelectedValue(event.target.value);
     setIsAnswered(true);
   };
+  
 
   return (
     <>
@@ -61,15 +63,37 @@ export default function MultipleChoice({
           }, }}
           disabled = {id==="0"}
           className={className}
-       
-
           >
+           <div style={{display:"flex"}}>
           <FormControlLabel value="a" control={<Radio />} label={choiceA} disabled={submitted || id=="0"} sx={{"& .Mui-checked": {color:green[700]}, paddingBottom:1}}/>
+          <div style={{marginTop:"10px"}}>
+
+          {submitted && selectedValue === "a" && isCorrect ? <CheckMark sx={{mt:10}}/> : null}
+          {submitted && selectedValue === "a" && !isCorrect ? <CrossMark sx={{mt:10}}/> : null}
+          </div>
+          </div>
+          <div style={{display:"flex"}}>
+          
           <FormControlLabel value="b" control={<Radio />} label={choiceB} disabled={submitted || id=="0"} sx={{"& .Mui-checked": {color: green[700]}, paddingBottom:1}}/>
+          <div style={{marginTop:"10px"}}>
+
+          {submitted && selectedValue === "b" && isCorrect  ? <CheckMark sx={{mt:10}}/> : null}
+          {submitted && selectedValue === "b" && !isCorrect  ? <CrossMark sx={{mt:10}}/> : null}
+          
+          </div>
+          </div>
+          <div style={{display:"flex"}}>
           <FormControlLabel value="c" control={<Radio />} label={choiceC} disabled={submitted || id=="0"} sx={{"& .Mui-checked": {color: green[700]}, paddingBottom:1}}/>
+          <div style={{marginTop:"10px"}}>
+
+          {submitted && selectedValue === "c" && isCorrect   ? <CheckMark sx={{mt:10}}/> : null}
+          {submitted && selectedValue === "c" && !isCorrect ? <CrossMark sx={{mt:10}}/> : null}
+          {submitted && selectedValue !== "a" && selectedValue !=="b" && selectedValue !== "c" && id !="0" ? <CrossMark sx={{mt:0}}/> : null}
+          </div>
+          </div>
         </RadioGroup>
       </FormControl>
-      {submitted && !id=="0" &&(
+      {/* {submitted && !id=="0" &&(
         <Box ml={2} sx={{pl:4}}>
           {selectedValue === answer ? (
             <CheckMark />
@@ -77,7 +101,7 @@ export default function MultipleChoice({
             <CrossMark/>
           )}
         </Box>
-      )}
+      )} */}
   
     </>
   );

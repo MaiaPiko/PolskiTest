@@ -24,6 +24,7 @@ export default function TrueOrFlase({
   const dispatch = useDispatch();
   const points = useSelector((state) => state.point.points);
   const radioColor = green[700]
+  const isCorrect = selectedValue === answer;
 
   useEffect(() => {
     if (submitted && !id=="0") {
@@ -52,11 +53,24 @@ export default function TrueOrFlase({
           onChange={handleChange}
           sx={{ ":disabled": { submitted: true } }}
           >
+            <div style={{display:"flex"}}>
           <FormControlLabel value="p" control={<Radio />} label="P"disabled={submitted || id=="0"} sx={{  "& .Mui-checked": {color:radioColor}}}/>
+          <div style={{marginTop:"10px"}}>
+          {submitted && selectedValue === "p" && isCorrect  ? <CheckMark sx={{mt:4}}/> : null}
+          {submitted && selectedValue === "p" && !isCorrect  ? <CrossMark sx={{mt:4}}/> : null}
+          </div>
+          </div>
+          <div style={{display:"flex"}}>
           <FormControlLabel value="f" control={<Radio />} label="F" disabled={submitted || id=="0"} sx={{  "& .Mui-checked": {color:radioColor}}}/>
+          <div style={{marginTop:"10px"}}>
+          {submitted && selectedValue === "f" && isCorrect  ? <CheckMark sx={{mt:5}}/> : null}
+          {submitted && selectedValue === "f" && !isCorrect  ? <CrossMark sx={{mt:5}}/> : null}
+          {submitted && selectedValue !== "f" && selectedValue !=="p" && id !="0"  ? <CrossMark sx={{mt:0}}/> : null}
+          </div>
+          </div>
         </RadioGroup>
       </FormControl>
-      {submitted && id!="0" && (
+      {/* {submitted && id!="0" && (
         <Box ml={3}>
           {selectedValue === answer ? (
             <>
@@ -70,7 +84,7 @@ export default function TrueOrFlase({
             </>
           )}
         </Box>
-      )}
+      )} */}
   
     </>
   );
