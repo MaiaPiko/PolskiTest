@@ -38,7 +38,11 @@ function Home() {
      
         <div style={{ display: 'flex', alignContent:"center",textAlign:"center", paddingX:5  }}>
        
+<<<<<<< HEAD
           <Button variant="contained" color="success" component={Link} to="/test/1"  sx={{ p: 5, ml: 0.5,  width:"60%", backgroundColor:green[400] }}> Test 1</Button>
+=======
+          <Button variant="contained" color="success" component={Link} to="/test/1"  sx={{ p: 5, ml: 0.5,  width:"60%", backgroundColor:green[400] }}> Test 1 </Button>
+>>>>>>> 7ae6c75517b942cc94f49363e21e172bd54406e6
           <Button variant="contained" color="success" component={Link} to="/test/2"  sx={{ p: 5, ml:0.5 , width:"60%", backgroundColor:green[400]}}> Test 2</Button>
           <Button variant="contained" color="success" component={Link} to="/test/3"  sx={{ p: 5, ml:0.5 , width:"60%", backgroundColor:green[400]}}> Test 3</Button>
 
