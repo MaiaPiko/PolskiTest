@@ -65,7 +65,7 @@ function TopNav() {
           <h3 >Testy</h3>
         </Divider>
         <List>
-          {['Test 1', 'Test 2'].map((text, index) => (
+          {['Test 1', 'Test 2', 'Test 3'].map((text, index) => (
             <ListItem key={text} disablePadding>
               <ListItemButton component={Link} to={`/test/${index + 1}`}>
                 <ListItemIcon>
